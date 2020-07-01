@@ -5,8 +5,9 @@ padding:0px;
 padding-right:30px;
 }
 
-/* .Logo img {
-    text-align:center;
-    animation:App-logo-spin infinite 20s linear;
-    height:80px;
-} */
+.Header a{
+    text-decoration: none;
+}
+.Header a:hover{
+    text-decoration: none;
+}
