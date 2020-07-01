@@ -1,8 +1,21 @@
 const functions = require('firebase-functions');
+const admin = require('firebase-admin');
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });
+
+admin.initializeApp();
+admin.firestore().settings({ timestampsInSnapshots: true });
+
+
+exports.createProfile = functions.auth.user().onCreate(
+  user => admin.firestore().doc(`users/${user.uid}`).set({
+    email: user.email,
+    displayName: user.displayName,
+    photoURL: user.photoURL,
+    createdAt: new Date(),
+  })
+);
+
+
+exports.deleteProfile = functions.auth.user().onDelete(
+  user => admin.firestore().doc(`users/${user.uid}`).delete()
+);
