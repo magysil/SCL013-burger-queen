@@ -1,24 +1,26 @@
 // Dependencies
-// import React from 'react';
-// import { Route, Switch } from 'react-router-dom';
+import React from "react";
+import { Route, Switch } from "react-router-dom";
 
 // Components
-// import App from './Components/App';
-// import Inicio from './components/Inicio/Inicio';
-// import Meseros from './components/Meseros';
-// import Cocina from './components/Cocina/Cocina';
-// import Entregas from './Components/Entregas';
-// import Page404 from './components/Page404';
+import App from "../App.js";
+import Home from "../Home/index.js";
+import Meseros from "../Meseros/index.js";
+import Cocina from "../Cocina/index.js";
+import Entregas from "../Entregas/index.js";
+import Page404 from "../Page404/page404.js";
+//import Content from "./Component/Global/Content.js"
 
-// const AppRoutes = () =>
-// <App> 
-// <Switch>
-//     {/* <Route path='#/inicio' component={Inicio} /> */}
-//     <Route path='#/meseros' component={Meseros} />
-//     {/* <Route path='#/cocina' component={Cocina} /> */}
-//     <Route path='#/entregas' component={Entregas} />
-//     <Route component={Page404} />
-// </Switch>
-// </App>;
+const AppRoutes = () => (
+  <App>
+    <Switch>
+      <Route exact path="/meseros" component={Meseros} />
+      <Route exact path="/cocina" component={Cocina} />
+      <Route exact path="/entregas" component={Entregas} />
+      <Route exact path="/" component={Home} />
+      <Route component={Page404} />
+    </Switch>
+  </App>
+);
 
-// export default AppRoutes;
+export default AppRoutes;
