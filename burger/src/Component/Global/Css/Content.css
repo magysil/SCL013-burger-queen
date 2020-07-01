@@ -42,7 +42,7 @@ h2 {
     letter-spacing: 5px;
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
     .Content {
         margin:0px auto;
         margin-top: 70px;
@@ -55,7 +55,7 @@ h2 {
         border-radius:11px;
         align-items: center;
         }
-}
+} */
 /* @keyframes App-logo-spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(30deg); }
