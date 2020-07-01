@@ -1,6 +1,7 @@
 // Dependencies
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
+import { Link } from "react-router-dom";
 
 // Assets
 import './Css/Header.css';
@@ -17,7 +18,7 @@ class Header extends Component {
 
     return (
       <div className='Header'>
-    <h2>{title}</h2>
+     <Link to={'/'}><h2>{title}</h2></Link>
     </div>
       );
     }
