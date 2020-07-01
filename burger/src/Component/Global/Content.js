@@ -1,25 +1,18 @@
 // Dependencies
-import React, { Component } from 'react';
-
+import React, { Component } from "react";
+import propTypes from "prop-types";
 // Assets
-import logo from './Images/logoburgername.PNG';
-import './Css/Content.css';
+//import logo from "./Images/logoburgername.PNG";
+import "./Css/Content.css";
 
 class Content extends Component {
-    render() {
-    return (
-      <div className='Content'>
-        <div className='Logo'>
-      <img src={logo} alt='logo'/>
-      <div className='button'>
-     <button  className='button'><h2>Meseros</h2></button>
-     <button  className='button'><h2>Cocina</h2></button>
-     <button  className='button'><h2>Entregas</h2></button>
-    </div>
-    </div>
-    </div>
-      );
-    }
-    }
-  
-  export default Content;
+  static propTypes = {
+    body: propTypes.object.isRequired,
+  };
+  render() {
+    const { body } = this.props;
+    return <div className="Content">{body}</div>;
+  }
+}
+
+export default Content;

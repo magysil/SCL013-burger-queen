@@ -1,14 +1,15 @@
 // Dependencies
-import React, { Components } from 'react'
+import React, { Component } from "react";
+import "../Global/Css/Entregas.css";
 
-class Entregas extends Components {
-    render() {
-        return(
-            <div className='Entregas'>
-                <h1>Entregas</h1>
-            </div>
-        );
-    }
+class Entregas extends Component {
+  render() {
+    return (
+      <div className="Entregas">
+        <h1>Pedidos por Entregar</h1>
+      </div>
+    );
+  }
 }
 
 export default Entregas;
