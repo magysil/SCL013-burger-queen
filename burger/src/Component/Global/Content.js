@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 // Assets
-import logo from './Images/logoburgername.PNG';
+import logo from './Images/logoBQ.svg';
 import './Css/Content.css';
 
 class Content extends Component {
@@ -11,7 +11,7 @@ class Content extends Component {
       <div className='Content'>
         <div className='Logo'>
       <img src={logo} alt='logo'/>
-      <div className='button'>
+      <div className='button-container'>
      <button  className='button'><h2>Meseros</h2></button>
      <button  className='button'><h2>Cocina</h2></button>
      <button  className='button'><h2>Entregas</h2></button>
