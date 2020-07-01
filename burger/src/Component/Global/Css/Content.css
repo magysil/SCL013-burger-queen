@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,500;0,600;1,400&family=Asap:ital,wght@0,400;0,500;1,400&display=swap');
+
 .Content {
 margin:0px auto;
 margin-top: 70px;
@@ -34,11 +36,26 @@ align-items: center;
 
 h2 {
     color: #4F1011;
+    font-family: 'Asap', sans-serif;
     font-size: 1.5rem;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
 }
 
+@media (min-width: 1024px) {
+    .Content {
+        margin:0px auto;
+        margin-top: 70px;
+        width:66%;
+        background-color:rgb(255, 255, 255);
+        height:640px;
+        padding:10px;
+        color:white;
+        text-align:center;
+        border-radius:11px;
+        align-items: center;
+        }
+}
 /* @keyframes App-logo-spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(30deg); }
