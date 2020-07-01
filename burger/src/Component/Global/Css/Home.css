@@ -1,40 +1,51 @@
-.Home {
-margin:0px auto;
-margin-top: 20px;
-width:70%;
-background-color:rgb(255, 255, 255);
-height:760px;
-padding:10px;
-color:white;
-text-align:center;
-border-radius:20px;
-align-items: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,500;0,600;1,400&family=Asap:ital,wght@0,400;0,500;1,400&display=swap');
 
-.Logo img {
+
+/* .Logo img {
     text-align:center;
     animation:App-logo-spin infinite 20s linear;
     height:230px;
-    padding:20px;
-}
+    padding: 20px 20px 0 20px;
+} */
 
 .button {
-    display:grid;
-    margin:10px;
-    grid-gap:20px;
-    padding:5px;
-    border:10px;
+    display: grid;
+    margin: 34px 0 0 55px;
+    grid-gap: 20px;
+    padding: 5px;
+    border: 10px;
+    border-radius: 5px;
+    width: 280px;
+    height: 82%;
+    -webkit-box-shadow: 3px 9px 10px -9px rgba(0,0,0,0.28);
+    -moz-box-shadow: 3px 9px 10px -9px rgba(0,0,0,0.28);
+    box-shadow: 3px 9px 10px -9px rgba(0,0,0,0.28);
 }
 
 h2 {
-    color:#4F1011;
-     font-size:38px;
+    color: #4F1011;
+    font-family: 'Asap', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-decoration: none;
 }
 
-.button a {
-    text-decoration: none;
-}
-.button a:hover {
-    text-decoration: none;
-    background-color: #93c244;
-}
+/* @media (min-width: 1024px) {
+    .Home {
+        margin:0px auto;
+        margin-top: 70px;
+        width:66%;
+        background-color:rgb(255, 255, 255);
+        height:1000px;
+        padding:10px;
+        color:white;
+        text-align:center;
+        border-radius:11px;
+        align-items: center;
+        }
+} */
+/* @keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(30deg); }
+} */ 
