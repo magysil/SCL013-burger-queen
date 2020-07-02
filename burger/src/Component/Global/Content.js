@@ -1,10 +1,8 @@
 // Dependencies
 import React, { Component } from "react";
 import propTypes from "prop-types";
-// Assets
-//import logo from "./Images/logoburgername.PNG";
-import "./Css/Content.css";
 
+// Assets
 class Content extends Component {
   static propTypes = {
     body: propTypes.object.isRequired,

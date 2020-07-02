@@ -1,12 +1,15 @@
-.Header {
+.Header2 {
+background-color:rgb(226, 195, 19);
 text-align:right;
 padding:0px;
 padding-right:30px;
 }
 
-.Header a{
+.Header2 a{
     text-decoration: none;
 }
-.Header a:hover{
+.Header2 a:hover{
     text-decoration: none;
 }
+
+
