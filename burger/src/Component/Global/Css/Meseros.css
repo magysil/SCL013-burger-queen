@@ -1,3 +1,10 @@
-h1{
-    color: black;
+.Component {
+  background-color: black;
+
+}
+.Meseros {
+  background-color: rgb(255, 255, 255);
+}
+.Header {
+  Text-align:left;
 }
