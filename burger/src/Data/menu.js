@@ -31,6 +31,11 @@ const almuerzo = [
         {objectID: 'ae02', name: 'Queso vegano', price: 670,},
         {objectID: 'ae03', name: 'Huevo', price: 550,}
         ],
+    options: [
+        {objectID: 'op01', name: 'Res',},
+        {objectID: 'op02', name: 'Pollo',},
+        {objectID: 'op03', name: 'Vegana',}
+        ],
     },
     {
     objectID: 'ap02',
@@ -40,6 +45,11 @@ const almuerzo = [
         {objectID: 'ae01', name: 'Queso', price: 550,},
         {objectID: 'ae02', name: 'Queso vegano', price: 670,},
         {objectID: 'ae03', name: 'Huevo', price: 550,}
+        ],
+    options: [
+        {objectID: 'op01', name: 'Res',},
+        {objectID: 'op02', name: 'Pollo',},
+        {objectID: 'op03', name: 'Vegana',}
         ],
     },
     {
@@ -56,11 +66,6 @@ const almuerzo = [
     objectID: 'aa01',
     name: 'Aros de cebolla',
     price: 2200,
-    extras: [
-        {objectID: 'ae01', name: 'Queso', price: 550,},
-        {objectID: 'ae02', name: 'Queso vegano', price: 670,},
-        {objectID: 'ae03', name: 'Huevo', price: 550,}
-        ],
     },
     {
     objectID: 'ab01',
