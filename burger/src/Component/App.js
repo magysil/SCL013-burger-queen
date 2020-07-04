@@ -1,8 +1,8 @@
+/* eslint-disable no-unused-vars */
 // Dependencias
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
 // Componentes
-import Header from "./Global/Header.js";
 import Content from "./Global/Content.js";
 import Footer from "./Global/Footer.js";
 // Data
@@ -13,15 +13,14 @@ class App extends Component {
     children: PropTypes.object.isRequired
   };
   render() {
-    const { children } = this.props;
+    const { children} = this.props;
     return (
       <div className="App">
- <Header title= {"Inicio"} />
-      <Content body={ children } />
-      <Footer/>
+      <Content content={ children } />
       </div>
     );
   }
 }
+
 
 export default App;

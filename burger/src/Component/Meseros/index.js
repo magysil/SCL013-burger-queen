@@ -6,7 +6,7 @@ class Meseros extends Component {
   render() {
     return (
       <div className="Meseros">
-       <div className="Header2">
+       <div className="Header">
        <div className="Logo2">
           <img src='./crown.svg' alt="logo2"/>
 </div>
