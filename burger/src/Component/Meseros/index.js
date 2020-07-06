@@ -1,12 +1,14 @@
 // Dependencies
 import React, { Component } from "react";
 import "../Global/Css/Meseros.css";
-
+import Itemenu from "../ItemMenu/itemMenu";
+import Executingorder from "../ItemMenu/Executingorder";
 class Meseros extends Component {
   render() {
     return (
       <div className="Meseros">
-        <h1>Menu</h1>
+        <Itemenu />
+        <Executingorder />
       </div>
     );
   }
