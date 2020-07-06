@@ -6,22 +6,19 @@ class Meseros extends Component {
   render() {
     return (
       <div className="Meseros">
-       <div className="Header">
-       <div className="Logo2">
-          <img src='./crown.svg' alt="logo2"/>
-</div>
-
-      <div className="Menu">
+      <div className="Menus">
         <h2>Menus</h2>
         <h3>Yo soy el contenedor de menus</h3>
         <br></br>
         <br></br>
-
+        </div>
+        <div className="Agregar">
+        <h3>Yo tomo los pedidos</h3>
+        <br></br>
+        <br></br>
         <h3>Enviar</h3>
       </div>
       </div>
-      </div>
-
     );
   }
 }

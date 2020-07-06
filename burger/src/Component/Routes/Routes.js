@@ -20,7 +20,7 @@ const AppRoutes = () => (
       <Layout exact path="/meseros" component={Meseros} />
       <Layout exact path="/cocina" component={Cocina} />
       <Layout exact path="/entregas" component={Entregas} />
-      <Layout exact path="/404" component={Page404} />
+      <Layout component={Page404} />
     </Switch>
   </App>
 );

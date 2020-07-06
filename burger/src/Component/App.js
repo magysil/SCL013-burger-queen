@@ -1,10 +1,10 @@
-/* eslint-disable no-unused-vars */
 // Dependencias
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
+
 // Componentes
 import Content from "./Global/Content.js";
-import Footer from "./Global/Footer.js";
+
 // Data
 //import items from "../Data/menu.js";
 
@@ -21,6 +21,5 @@ class App extends Component {
     );
   }
 }
-
 
 export default App;
