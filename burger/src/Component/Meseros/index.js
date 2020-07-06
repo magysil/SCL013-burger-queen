@@ -1,6 +1,9 @@
+
 // Dependencies
 import React, { Component } from "react";
 import "../Global/Css/Meseros.css";
+import Itemenu from "../ItemMenu/itemMenu";
+import Executingorder from "../ItemMenu/Executingorder";
 
 class Meseros extends Component {
   render() {
@@ -9,13 +12,11 @@ class Meseros extends Component {
       <div className="Menus">
         <h2>Menus</h2>
         <h3>Yo soy el contenedor de menus</h3>
-        <br></br>
-        <br></br>
+         <Itemenu />
         </div>
         <div className="Agregar">
         <h3>Yo tomo los pedidos</h3>
-        <br></br>
-        <br></br>
+          <Executingorder />
         <h3>Enviar</h3>
       </div>
       </div>
@@ -23,4 +24,4 @@ class Meseros extends Component {
   }
 }
 
-export default Meseros;
+
