@@ -3,7 +3,7 @@
 .Home {
   display:flex;
   flex-direction: column;
- justify-items: center;
+  justify-items: center;
   margin:0px auto;
   margin-top: 90px;
   width:66%;
@@ -16,7 +16,7 @@
   align-items: center;
 }
 
-  .Logo, img {
+.Logo, img {
     height:230px;
     padding: 20px;
 }
