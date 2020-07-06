@@ -8,7 +8,7 @@ class Meseros extends Component {
       <div className="Meseros">
        <div className="Header2">
        <div className="Logo2">
-          <img src='./crown.svg' alt="logo2"/>
+          <img src='../Global/Images/crown.svg' alt="logo2"/>
 </div>
 
       <div className="Menu">
