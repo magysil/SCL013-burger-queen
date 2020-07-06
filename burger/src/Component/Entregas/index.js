@@ -6,7 +6,10 @@ class Entregas extends Component {
   render() {
     return (
       <div className="Entregas">
-        <h1>Pedidos por Entregar</h1>
+      <div className="Entregar">
+      <h2>Entregas</h2>
+      <h3>Para entregar</h3>
+      </div>
       </div>
     );
   }
