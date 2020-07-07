@@ -12,10 +12,10 @@ class Footer extends Component {
   };
 
     render() {
-      const { copyright = '&copy; Burger Queen -Laboratoria 2020-' } = this.props;
+      const { copyright = 'Burger Queen &copy; Laboratoria 2020' } = this.props;
     return (
       <div className='Footer'>
-     <h3 dangerouslySetInnerHTML={{__html: copyright }}/>
+     <h4 dangerouslySetInnerHTML={{__html: copyright }}/>
     </div>
       );
     }

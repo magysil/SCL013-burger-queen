@@ -1,3 +1,17 @@
-h1{
-    color: black;
+.Meseros {
+  display:grid;
+  flex-direction:column;
+}
+
+.Menus {
+  background-color: rgb(255, 255, 255);
+  height: 520px;
+  padding:20px;
+  text-align:center;
+}
+
+.Agregar {
+  height: 290px;
+  padding:20px;
+  text-align:center;
 }

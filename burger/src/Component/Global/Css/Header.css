@@ -1,13 +1,34 @@
 .Header {
-background-color:rgb(226, 195, 19);
-text-align:right;
-padding:0px;
-padding-right:30px;
+display:flex;
+flex-direction:row;
+text-align:left;
+background-color: white;
 }
 
-.Header a{
+.Header a {
+    text-decoration: none;
+    padding-top:30px;
+}
+
+.Header a:hover {
     text-decoration: none;
 }
-.Header a:hover{
-    text-decoration: none;
+
+.Header h2 {
+  color:rgb(255, 255, 255);
 }
+
+.Header button {
+  background-color:#F4B200;
+  border-radius: 10px;
+  border:none;
+  color:rgb(255, 255, 255);
+  padding:0px;
+  width:125px;
+}
+
+.Logo2 img {
+padding:20px;
+height:80px;
+}
+
