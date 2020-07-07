@@ -11,13 +11,11 @@ class Itemenu extends Component {
       typefood: [],
       mealtime:''
     };
-  
   }
 
   componentDidMount() {
     this.setState({typefood: data})
     console.log(data);
-
   }
   // Clicks en los items del menú
   handleClick = (e, meal) => {
@@ -53,7 +51,6 @@ class Itemenu extends Component {
               {filtertype.name}
               <span className="badge badge-primary badge-pill">{filtertype.price}</span>
               </li>
-
             ))}
           </ul>
         </div>

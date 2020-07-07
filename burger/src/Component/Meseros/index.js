@@ -11,11 +11,10 @@ class Meseros extends Component {
       <div className="Meseros">
       <div className="Menus">
         <h2>Menus</h2>
-        <h3>Yo soy el contenedor de menus</h3>
          <Itemenu />
         </div>
         <div className="Agregar">
-        <h3>Yo tomo los pedidos</h3>
+        <h4>Nombre cliente</h4>
           <Executingorder />
         <h3>Enviar</h3>
       </div>

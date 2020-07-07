@@ -35,8 +35,6 @@
 }
 
 .NavLink {
-text-decoration: none;
-text-align: center;
 box-shadow: 3px 9px 10px -9px rgba(0,0,0,0.28);
 border:none;
 }
