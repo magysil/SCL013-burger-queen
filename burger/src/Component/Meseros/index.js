@@ -10,14 +10,12 @@ class Meseros extends Component {
     return (
       <div className="Meseros">
       <div className="Menus">
-        <h2>Menus</h2>
-        <h3>Yo soy el contenedor de menus</h3>
+        <h2>Menus del Día</h2>
          <Itemenu />
         </div>
         <div className="Agregar">
-        <h3>Yo tomo los pedidos</h3>
           <Executingorder />
-        <h3>Enviar</h3>
+        <button className='btn btn-danger'>Enviar</button>
       </div>
       </div>
     );
