@@ -1,7 +1,3 @@
-/* h1 {
-    color: black;
-}
-
 .contentbutton {
     display: flex;
 }
@@ -10,18 +6,35 @@
     justify-content: center;
 }
 
-p {
-    color: black;
-}
-
-ul {
-    display: inline-block;
-    color: black;
-/* } */
 .custom {
     min-width: 220px !important;
     margin-right: 10px !important;
     padding: 10px 5px;
     margin: 5px;
     font-size: 14px;
+}
+
+.itemenu {
+  display: flex;
+  flex-direction:row;
+}
+
+.contentbutton {
+  display:grid;
+ grid-template-columns: 1fr 1fr;
+  text-align: center;
+  padding: 10px;
+}
+
+.btnoptions {
+  text-align:center;
+  border:none;
+  border-radius: 10px;
+  padding-top:12px;
+  margin:15px;
+}
+
+.btnoptions h2 {
+  color:rgb(155, 139, 139);
+  text-align:center;
 }
