@@ -4,7 +4,7 @@
 
 .Menus {
   background-color: rgb(255, 255, 255);
-  height: 325px;
+  height: 370px;
   padding:20px;
   text-align:center;
 }
@@ -38,9 +38,6 @@
   display:grid;
   height: 350px;
   padding:20px;
-}
-
-h3 .Agregar {
   text-align:center;
 }
 
