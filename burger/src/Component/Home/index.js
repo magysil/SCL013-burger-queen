@@ -11,7 +11,6 @@ class Home extends Component {
       <div className="Home">
         <div className="Logo">
           <img src={logo} alt="logo"/></div>
-
           <div className='Buttons'>
             <button className="NavLink">
             <Link to={'/meseros'}><h2>Meseros</h2></Link>

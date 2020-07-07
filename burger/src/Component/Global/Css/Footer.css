@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,500;0,600;1,400&family=Asap:ital,wght@0,400;0,500;1,400&display=swap');
 
 .Footer {
+  display:grid;
     margin:0 auto;
     text-align:center;
-    padding:0px;
-    margin-top:40px;
+    padding:40px;
 }
 
 h4 {
