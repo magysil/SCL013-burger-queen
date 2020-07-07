@@ -5,12 +5,13 @@ import propTypes from "prop-types";
 // Assets
 class Content extends Component {
   static propTypes = {
-    body: propTypes.object.isRequired,
+    content: propTypes.object.isRequired,
   };
   render() {
-    const { body } = this.props;
-    return <div className="Content">{body}</div>;
+    const { content } = this.props;
+    return <div className="Content">{content}</div>;
   }
 }
 
 export default Content;
+
