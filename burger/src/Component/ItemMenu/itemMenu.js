@@ -2,8 +2,6 @@
 import React, { Component } from "react";
 import "../Global/Css/itemMenu.css";
 import data from "../../Data/menu.json";
-import {Button, ButtonToolbar} from 'react-bootstrap'
-import {OptionsModal} from './OptionsModal'
 
 class Itemenu extends Component {
   constructor(props) {
@@ -11,8 +9,7 @@ class Itemenu extends Component {
 
     this.state = {
       typefood: [],
-      mealtime:'',
-      addModalShow : false
+      mealtime:''
     };
   
   }
@@ -35,9 +32,6 @@ class Itemenu extends Component {
     const breakfastmenu = () => {
       this.setState({mealtime:'desayuno'})
     }
-
-    const addModalClose = () => this.setState({addModalShow:false});
-
     const mealt = this.state.mealtime
     console.log(mealt);
     return (
@@ -50,6 +44,7 @@ class Itemenu extends Component {
             <h2>Almuerzo</h2>
           </button>
         </div>
+
         <div className="container w-75">
           
             {data.filter(item => item.type ===`${mealt}`).map(filtertype => (
@@ -69,6 +64,7 @@ class Itemenu extends Component {
 
             ))}
           
+
         </div>
       </div>
     );
