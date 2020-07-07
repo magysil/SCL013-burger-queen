@@ -1,3 +1,4 @@
+
 // Dependencies
 import React, { Component } from "react";
 import "../Global/Css/Meseros.css";
@@ -14,8 +15,6 @@ class Meseros extends Component {
         <CookieModalContainer />
         <Executingorder />
       </div>
-      
-
     );
   }
 }
