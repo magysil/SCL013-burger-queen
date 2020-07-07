@@ -2,6 +2,9 @@
 import React, { Component } from "react";
 import "../Global/Css/itemMenu.css";
 import data from "../../Data/menu.json";
+import {Button} from 'react-bootstrap';
+import {OptionsModal} from './OptionsModal';
+
 
 class Itemenu extends Component {
   constructor(props) {
@@ -9,7 +12,8 @@ class Itemenu extends Component {
 
     this.state = {
       typefood: [],
-      mealtime:''
+      mealtime:'',
+      addModalShow : false
     };
   
   }
@@ -32,6 +36,10 @@ class Itemenu extends Component {
     const breakfastmenu = () => {
       this.setState({mealtime:'desayuno'})
     }
+
+    
+    const addModalClose = () => this.setState({addModalShow:false});
+
     const mealt = this.state.mealtime
     console.log(mealt);
     return (
