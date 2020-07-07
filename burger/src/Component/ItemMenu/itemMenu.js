@@ -4,6 +4,7 @@ import "../Global/Css/itemMenu.css";
 import data from "../../Data/menu.json";
 import {OptionsModal} from './OptionsModal'
 
+
 class Itemenu extends Component {
   constructor(props) {
     super(props);
@@ -11,7 +12,8 @@ class Itemenu extends Component {
     this.state = {
       typefood: [],
       mealtime:'',
-      addModalShow : false
+      addModalShow: false
+
     };
   }
 
@@ -33,7 +35,6 @@ class Itemenu extends Component {
     const breakfastmenu = () => {
       this.setState({mealtime:'desayuno'})
     }
-
     const addModalClose = () => this.setState({addModalShow:false});
 
     const mealt = this.state.mealtime
