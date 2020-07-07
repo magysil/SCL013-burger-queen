@@ -24,4 +24,4 @@ class Meseros extends Component {
   }
 }
 
-
+export default Meseros;
