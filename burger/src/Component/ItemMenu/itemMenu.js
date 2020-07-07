@@ -44,13 +44,27 @@ class Itemenu extends Component {
             <h2>Almuerzo</h2>
           </button>
         </div>
-        <div className="d-flex flex-wrap justify-content-between ">
-              {data.filter(item => item.type ===`${mealt}`).map(filtertype => (
-              <button onClick={e => this.handleClick(e, filtertype)} key={filtertype.objectID} 
-              type="button" className="btn btn-light custom">
-              {filtertype.name}
-              <span className="badge badge-primary badge-pill ml-2">{filtertype.price}</span>
-              </button>))}
+
+        <div className="container w-75">
+          
+            {data.filter(item => item.type ===`${mealt}`).map(filtertype => (
+              
+              <>
+              <Button onClick={e => this.handleClick(e, filtertype)} key={filtertype.objectID} 
+              type="button" className="btn btn-light custom" variant = 'primary' onClick={() => this.setState({addModalShow:true})}>
+              
+                {filtertype.name}</Button>
+
+                  <OptionsModal
+                  show={this.state.addModalShow}
+                  onHide={addModalClose} />
+                
+              <span className="badge badge-primary badge-pill">{filtertype.price}</span>
+              </>
+
+            ))}
+          
+
         </div>
       </div>
     );
