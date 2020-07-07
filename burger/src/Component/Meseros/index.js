@@ -4,7 +4,6 @@ import React, { Component } from "react";
 import "../Global/Css/Meseros.css";
 import Itemenu from "../ItemMenu/itemMenu";
 import Executingorder from "../ItemMenu/Executingorder";
-import Total from "../ItemMenu/Total";
 
 class Meseros extends Component {
   render() {
@@ -16,7 +15,6 @@ class Meseros extends Component {
         </div>
         <div className="Agregar">
           <Executingorder />
-          <Total />
         <button className='btn btn-danger'>Enviar</button>
       </div>
       </div>
