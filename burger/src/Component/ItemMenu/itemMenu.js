@@ -17,6 +17,7 @@ class Itemenu extends Component {
     this.setState({typefood: data})
     console.log(data);
   }
+
   // Clicks en los items del menú
   handleClick = (e, meal) => {
   e.preventDefault();
@@ -34,26 +35,26 @@ class Itemenu extends Component {
     console.log(mealt);
     return (
       <div className="Itemenu">
-        <div className="contentbutton justify-content-center mb-2">
-          <button type="button" className="btn btn-success mr-2" onClick={breakfastmenu}>
+        <div className="contentbutton">
+          <button type="button" className="btnoptions" onClick={breakfastmenu}>
             <h2>Desayuno</h2>
           </button>
-          <button type="button" className="btn btn-success" onClick={lunchmenu}>
+          <button type="button" className="btnoptions" onClick={lunchmenu}>
             <h2>Almuerzo</h2>
           </button>
         </div>
+
         <div className="container w-75">
           <ul className="list-group">
             {data.filter(item => item.type ===`${mealt}`).map(filtertype => (
-              
-              <li onClick={e => this.handleClick(e, filtertype)} key={filtertype.objectID} 
+              <li onClick={e => this.handleClick(e, filtertype)} key={filtertype.objectID}
               className="list-group-item d-flex justify-content-between align-items-center">
               {filtertype.name}
               <span className="badge badge-primary badge-pill">{filtertype.price}</span>
               </li>
             ))}
           </ul>
-        </div>
+          </div>
       </div>
     );
   }

@@ -23,12 +23,12 @@ background-color: white;
   border-radius: 10px;
   border:none;
   color:rgb(255, 255, 255);
-  padding:0px;
+  padding-top:10px;
   width:125px;
 }
 
 .Logo2 img {
-padding:20px;
-height:80px;
+padding-top:20px;
+height:100px;
 }
 
