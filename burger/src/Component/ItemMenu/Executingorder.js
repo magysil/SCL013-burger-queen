@@ -5,6 +5,7 @@ class Executingorder extends Component {
   render() {
     return (
       <div className="Executingorder container w-75">
+
         <table className="table table-hover">
           <thead>
             <tr>
