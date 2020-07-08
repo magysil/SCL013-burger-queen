@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {Modal, Button} from 'react-bootstrap'
 
 export class OptionsModal extends Component {
+  // eslint-disable-next-line
   constructor(props) {
     super(props);
   }
@@ -12,8 +13,7 @@ export class OptionsModal extends Component {
       {...this.props}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
+      centered>
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
           Elegir <b>proteína</b> y/o <b>extras</b>:
@@ -21,7 +21,7 @@ export class OptionsModal extends Component {
       </Modal.Header>
       <Modal.Body>
         <div className = 'container'>
-          ...
+
         </div>
       </Modal.Body>
       <Modal.Footer>

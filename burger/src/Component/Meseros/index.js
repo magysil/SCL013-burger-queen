@@ -15,7 +15,7 @@ class Meseros extends Component {
         </div>
         <div className="Agregar">
           <Executingorder />
-        <button className='btn btn-danger'>Enviar</button>
+
       </div>
       </div>
     );
