@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react'
-import './OptionsModal.css'
 import {Modal, Button} from 'react-bootstrap'
 import Checkbox from './Checkbox';
 import data from "../../Data/menu.json";
