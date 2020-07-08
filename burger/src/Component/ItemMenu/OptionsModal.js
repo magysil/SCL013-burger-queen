@@ -6,7 +6,6 @@ export class OptionsModal extends Component {
   constructor(props) {
     super(props);
   }
-
   render () {
     return (
       <Modal
@@ -21,7 +20,6 @@ export class OptionsModal extends Component {
       </Modal.Header>
       <Modal.Body>
         <div className = 'container'>
-
         </div>
       </Modal.Body>
       <Modal.Footer>
@@ -30,6 +28,4 @@ export class OptionsModal extends Component {
     </Modal>
     )
   }
-
-
 }
