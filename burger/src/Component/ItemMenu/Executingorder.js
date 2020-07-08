@@ -2,6 +2,10 @@
 import React, { Component } from "react";
 
 class Executingorder extends Component {
+  
+   // Envia indice a eliminar
+  deleteItem = (i) => {this.props.deleteItem(i)}
+
   render() {
     return (
       <div className="Executingorder container w-75">
@@ -16,25 +20,16 @@ class Executingorder extends Component {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">X</th>
-              <td>Hamburguesa Queso</td>
-              <td>5</td>
-              <td>$1500</td>
-            </tr>
-            <tr>
-              <th scope="row">X</th>
-              <td>Cafe</td>
-              <td>4</td>
-              <td>$1300</td>
-            </tr>
-            <tr>
-              <th scope="row">X</th>
-              <td>Agua</td>
-              <td>1</td>
-              <td>$1000</td>
-            </tr>
-          </tbody>
+            {this.props.totalItem.map((item, i) => {
+              return(
+             <tr key= {i+1}>
+               <th onClick={() => this.deleteItem(i)} className="deleteItem"scope="row">X</th>
+               <td>{item.name}</td>
+               <td>1</td>
+               <td>{item.price}</td>
+             </tr>
+              )})}
+         </tbody>
         </table>
         <button className='btn btn-success'>Enviar</button>
       </div>

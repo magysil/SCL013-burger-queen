@@ -13,7 +13,6 @@ class Itemenu extends Component {
       typefood: [],
       mealtime:'',
       addModalShow: false
-
     };
   }
 
@@ -26,6 +25,8 @@ class Itemenu extends Component {
   handleClick = (e, meal) => {
   e.preventDefault();
   console.log(`> Se ha Seleccionado: `, meal);
+  this.props.addItem(meal);
+  
   }
 
   render() {
