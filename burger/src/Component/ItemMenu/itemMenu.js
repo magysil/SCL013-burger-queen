@@ -10,6 +10,7 @@ class Itemenu extends Component {
     this.state = {
       typefood: [],
       mealtime:''
+      
     };
   
   }
@@ -23,6 +24,8 @@ class Itemenu extends Component {
   handleClick = (e, meal) => {
   e.preventDefault();
   console.log(`> Se ha Seleccionado: `, meal);
+  this.props.addItem(meal);
+  
   }
 
   render() {
@@ -44,18 +47,13 @@ class Itemenu extends Component {
             <h2>Almuerzo</h2>
           </button>
         </div>
-        <div className="container w-75">
-          <ul className="list-group">
-            {data.filter(item => item.type ===`${mealt}`).map(filtertype => (
-              
-              <li onClick={e => this.handleClick(e, filtertype)} key={filtertype.objectID} 
-              className="list-group-item d-flex justify-content-between align-items-center">
+        <div className="d-flex flex-wrap justify-content-between ">
+              {data.filter(item => item.type ===`${mealt}`).map(filtertype => (
+              <button onClick={e => this.handleClick(e, filtertype)} key={filtertype.objectID} 
+              type="button" className="btn btn-light custom">
               {filtertype.name}
-              <span className="badge badge-primary badge-pill">{filtertype.price}</span>
-              </li>
-
-            ))}
-          </ul>
+              <span className="badge badge-primary badge-pill ml-2">{filtertype.price}</span>
+              </button>))}
         </div>
       </div>
     );
