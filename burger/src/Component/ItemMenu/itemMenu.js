@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import "../Global/Css/itemMenu.css";
 import data from "../../Data/menu.json";
-import {Button, ButtonToolbar} from 'react-bootstrap'
+import {Button} from 'react-bootstrap'
 import {OptionsModal} from './OptionsModal'
 
 class Itemenu extends Component {
@@ -51,26 +51,24 @@ class Itemenu extends Component {
           </button>
         </div>
         <div className="container w-75">
-          <ul className="list-group">
+          
             {data.filter(item => item.type ===`${mealt}`).map(filtertype => (
               
-              <li onClick={e => this.handleClick(e, filtertype)} key={filtertype.objectID} 
-              className="list-group-item d-flex justify-content-between align-items-center">
-              <ButtonToolbar>
-                <Button
-                  variant = 'primary'
-                  onClick={() => this.setState({addModalShow:true})}
-                  >{filtertype.name}</Button>
+              <>
+              <Button onClick={e => this.handleClick(e, filtertype)} key={filtertype.objectID} 
+              type="button" className="btn btn-light custom" variant = 'primary' onClick={() => this.setState({addModalShow:true})}>
+              
+                {filtertype.name}</Button>
 
-                  <OptionsModal 
+                  <OptionsModal
                   show={this.state.addModalShow}
                   onHide={addModalClose} />
-                </ButtonToolbar> 
+                
               <span className="badge badge-primary badge-pill">{filtertype.price}</span>
-              </li>
+              </>
 
             ))}
-          </ul>
+          
         </div>
       </div>
     );

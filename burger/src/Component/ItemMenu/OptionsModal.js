@@ -1,13 +1,22 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import './OptionsModal.css'
 import {Modal, Button} from 'react-bootstrap'
+import Checkbox from './Checkbox';
+import data from "../../Data/menu.json";
+import CheckboxContainer from './CheckboxContainer';
 
 export class OptionsModal extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+
+    };
+  
   }
 
   render () {
+    const { label } = this.props;
+    const { isChecked } = this.state;
     return (
       <Modal
       {...this.props}
@@ -21,9 +30,11 @@ export class OptionsModal extends Component {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <div className = 'container'>
-          ...
-        </div>
+        
+      <div className="container">
+        <CheckboxContainer />
+      </div>
+
       </Modal.Body>
       <Modal.Footer>
         <Button variant = 'danger' onClick={this.props.onHide}>Close</Button>
@@ -31,6 +42,4 @@ export class OptionsModal extends Component {
     </Modal>
     )
   }
-
-
 }
