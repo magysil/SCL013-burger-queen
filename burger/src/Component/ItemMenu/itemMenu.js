@@ -2,6 +2,8 @@
 import React, { Component } from "react";
 import "../Global/Css/itemMenu.css";
 import data from "../../Data/menu.json";
+import {OptionsModal} from './OptionsModal'
+
 
 class Itemenu extends Component {
   constructor(props) {
@@ -9,17 +11,16 @@ class Itemenu extends Component {
 
     this.state = {
       typefood: [],
-      mealtime:''
-      
+      mealtime:'',
+      addModalShow: false
     };
-  
   }
 
   componentDidMount() {
     this.setState({typefood: data})
     console.log(data);
-
   }
+
   // Clicks en los items del menú
   handleClick = (e, meal) => {
   e.preventDefault();
@@ -35,27 +36,39 @@ class Itemenu extends Component {
     const breakfastmenu = () => {
       this.setState({mealtime:'desayuno'})
     }
+    const addModalClose = () => this.setState({addModalShow:false});
+
     const mealt = this.state.mealtime
     console.log(mealt);
     return (
       <div className="Itemenu">
         <div className="contentbutton justify-content-center mb-2">
-          <button type="button" className="btn btn-success mr-2" onClick={breakfastmenu}>
+          <button type="button" className="btnoptions" onClick={breakfastmenu}>
             <h2>Desayuno</h2>
           </button>
-          <button type="button" className="btn btn-success" onClick={lunchmenu}>
+          <button type="button" className="btnoptions" onClick={lunchmenu}>
             <h2>Almuerzo</h2>
           </button>
         </div>
-        <div className="d-flex flex-wrap justify-content-between ">
-              {data.filter(item => item.type ===`${mealt}`).map(filtertype => (
-              <button onClick={e => this.handleClick(e, filtertype)} key={filtertype.objectID} 
-              type="button" className="btn btn-light custom">
-              {filtertype.name}
+
+          <div className="d-flex flex-wrap justify-content-between">
+            {data.filter(item => item.type ===`${mealt}`).map(filtertype => (
+
+              <button onClick={e => this.handleClick(e, filtertype)} key={filtertype.objectID}
+              type= 'button' className='btn btn-light custom'>
+
+                <a onClick={() => this.setState({addModalShow:true})}
+                  >{filtertype.name}</a>
+
+                  <OptionsModal
+                  show={this.state.addModalShow}
+                  onHide={addModalClose} />
+
               <span className="badge badge-primary badge-pill ml-2">{filtertype.price}</span>
-              </button>))}
+              </button>
+            ))}
+            </div>
         </div>
-      </div>
     );
   }
 }

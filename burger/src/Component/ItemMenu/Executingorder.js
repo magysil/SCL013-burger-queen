@@ -9,6 +9,7 @@ class Executingorder extends Component {
   render() {
     return (
       <div className="Executingorder container w-75">
+
         <table className="table table-hover">
           <thead>
             <tr>
@@ -30,6 +31,7 @@ class Executingorder extends Component {
               )})}
          </tbody>
         </table>
+        <button className='btn btn-success'>Enviar</button>
       </div>
     );
   }

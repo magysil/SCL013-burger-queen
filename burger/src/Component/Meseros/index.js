@@ -1,9 +1,9 @@
-
 // Dependencies
 import React, { Component } from "react";
 import "../Global/Css/Meseros.css";
 import Itemenu from "../ItemMenu/itemMenu";
 import Executingorder from "../ItemMenu/Executingorder";
+import InputContainer from "../ItemMenu/InputContainer";
 
 class Meseros extends Component {
 
@@ -36,6 +36,7 @@ class Meseros extends Component {
          <Itemenu addItem={this.addItem.bind(this)}/>
         </div>
         <div className="Agregar">
+          <InputContainer />
           <Executingorder 
           totalItem={this.state.order}
           deleteItem={this.deleteItem.bind(this)} />

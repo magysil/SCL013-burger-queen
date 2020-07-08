@@ -1,6 +1,5 @@
 .Meseros {
-  display:grid;
-  flex-direction:column;
+  text-align:center;
 }
 
 .Menus {
@@ -11,7 +10,43 @@
 }
 
 .Agregar {
-  height: 290px;
-  padding:20px;
+  padding:0px;
   text-align:center;
 }
+
+.Executingorder .btn {
+width:40%;
+text-align:center;
+font-size:1.5em;
+border-radius: 10px;
+}
+
+.InputContainer {
+padding:30px;
+}
+
+form {
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+}
+
+ .InputName h2, input {
+font-size:1.2em;
+border-radius: 10px;
+margin:10px;
+}
+
+.InputOrder h2 , input{
+font-size:1.2em;
+border-radius: 10px;
+margin:10px;
+}
+
+.InputMesa h2 , input {
+  font-size:1.2em;
+  border-radius: 10px;
+  margin:10px;
+  }
+
+
