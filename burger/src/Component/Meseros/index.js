@@ -9,9 +9,14 @@ class Meseros extends Component {
   render() {
     return (
       <div className="Meseros">
-        
-        <Itemenu />
-        <Executingorder />
+      <div className="Menus">
+        <h2>Menus del Día</h2>
+         <Itemenu />
+        </div>
+        <div className="Agregar">
+          <Executingorder />
+
+      </div>
       </div>
     );
   }

@@ -6,6 +6,7 @@ import data from "../../Data/menu.json";
 import CheckboxContainer from './CheckboxContainer';
 
 export class OptionsModal extends Component {
+  // eslint-disable-next-line
   constructor(props) {
     super(props);
     this.state = {
@@ -22,8 +23,7 @@ export class OptionsModal extends Component {
       {...this.props}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
+      centered>
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
           Elegir <b>proteína</b> y/o <b>extras</b>:

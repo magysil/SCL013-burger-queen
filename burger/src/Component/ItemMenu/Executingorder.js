@@ -35,6 +35,7 @@ class Executingorder extends Component {
             </tr>
           </tbody>
         </table>
+        <button className='btn btn-success'>Enviar</button>
       </div>
     );
   }
