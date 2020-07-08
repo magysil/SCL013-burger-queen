@@ -10,6 +10,7 @@ class Itemenu extends Component {
     this.state = {
       typefood: [],
       mealtime:''
+      
     };
   
   }
@@ -23,6 +24,8 @@ class Itemenu extends Component {
   handleClick = (e, meal) => {
   e.preventDefault();
   console.log(`> Se ha Seleccionado: `, meal);
+  this.props.addItem(meal);
+  
   }
 
   render() {
