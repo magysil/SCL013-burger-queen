@@ -19,7 +19,7 @@ class Executingorder extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.total.map((item, i) => {
+            {this.props.totalItem.map((item, i) => {
               return(
              <tr key= {i+1}>
                <th onClick={() => this.deleteItem(i)} className="deleteItem"scope="row">X</th>

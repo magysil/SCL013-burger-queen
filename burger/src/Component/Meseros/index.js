@@ -37,7 +37,7 @@ class Meseros extends Component {
         </div>
         <div className="Agregar">
           <Executingorder 
-          total={this.state.order}
+          totalItem={this.state.order}
           deleteItem={this.deleteItem.bind(this)} />
         <button className='btn btn-danger'>Enviar</button>
       </div>
