@@ -4,6 +4,7 @@ import "../Global/Css/Meseros.css";
 import Itemenu from "../ItemMenu/itemMenu";
 import Executingorder from "../ItemMenu/Executingorder";
 import InputContainer from "../ItemMenu/InputContainer";
+import Total from "../ItemMenu/Total";
 
 class Meseros extends Component {
 
@@ -37,11 +38,13 @@ class Meseros extends Component {
         </div>
         <div className="Agregar">
           <InputContainer />
+          <div className='ExecutingorderAndTotal'>
           <Executingorder 
           totalItem={this.state.order}
           deleteItem={this.deleteItem.bind(this)} />
-        <button className='btn btn-danger'>Enviar</button>
-      </div>
+          {<Total /> }
+          </div>
+        </div>
       </div>
     );
   }
