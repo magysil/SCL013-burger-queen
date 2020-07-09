@@ -1,6 +1,6 @@
 // Dependencies
 import React, { Component } from "react";
-import "../Global/Css/ItemMenu.css";
+import "../Global/Css/itemMenu.css";
 import data from "../../Data/menu.json";
 import {OptionsModal} from './OptionsModal'
 
@@ -26,7 +26,7 @@ class Itemenu extends Component {
   e.preventDefault();
   console.log(`> Se ha Seleccionado: `, meal);
   this.props.addItem(meal);
-  
+
   }
 
   render() {
