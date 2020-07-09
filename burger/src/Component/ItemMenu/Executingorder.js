@@ -1,13 +1,21 @@
 // Dependencies
 import React, { Component } from "react";
+import "../Global/Css/Executingorder.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 class Executingorder extends Component {
-  render() {
-    return (
-      <div className="Executingorder container w-75">
+  
+   // Envia indice a eliminar
+  deleteItem = (i) => {this.props.deleteItem(i)}
 
+  render() {
+    
+    return (
+      <div className="Executingorder container">
+        
         <table className="table table-hover">
-          <thead>
+          <thead className='tableHead'>
             <tr>
               <th scope="col"></th>
               <th scope="col">PRODUCTOS ESCOGIDOS</th>
@@ -15,28 +23,20 @@ class Executingorder extends Component {
               <th scope="col">PRECIO</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <th scope="row">X</th>
-              <td>Hamburguesa Queso</td>
-              <td>5</td>
-              <td>$1500</td>
-            </tr>
-            <tr>
-              <th scope="row">X</th>
-              <td>Cafe</td>
-              <td>4</td>
-              <td>$1300</td>
-            </tr>
-            <tr>
-              <th scope="row">X</th>
-              <td>Agua</td>
-              <td>1</td>
-              <td>$1000</td>
-            </tr>
-          </tbody>
+          <tbody className='tableBody'>
+            {this.props.totalItem.map((item, i) => {
+              return(
+             <tr key= {i+1}>
+               <th onClick={() => this.deleteItem(i)} className="deleteItem" scope="row">
+               <i className="trashIcon"><FontAwesomeIcon icon={faTrash} /></i>
+               </th>
+               <td className='aaa table-light'>{item.name}</td>
+               <td className='aaa table-light'>1</td>
+               <td className='aaa table-light'>{item.price}</td>
+             </tr>
+              )})}
+         </tbody>
         </table>
-        <button className='btn btn-success'>Enviar</button>
       </div>
     );
   }
