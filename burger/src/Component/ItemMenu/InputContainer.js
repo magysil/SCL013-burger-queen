@@ -1,12 +1,14 @@
 // Dependencies
 import React, { Component } from "react";
+import "../Global/Css/inputContainer.css";
 
 class InputContainer extends Component {
     constructor (props) {
       super(props);
       this.state = {
         name: '',
-        order: ''
+        order: '',
+        table:''
       };
       this.handleChange = this.handleChange.bind(this)
     }
@@ -22,7 +24,7 @@ class InputContainer extends Component {
         <div className='InputContainer'>
         <form>
         <div className='InputName'>
-          <h2>Nombre cliente</h2>
+          <h2>Cliente</h2>
           <input
             type='text'
             name='name'

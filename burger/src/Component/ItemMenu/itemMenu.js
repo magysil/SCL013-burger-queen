@@ -1,6 +1,6 @@
 // Dependencies
 import React, { Component } from "react";
-import "../Global/Css/itemMenu.css";
+import "../Global/Css/ItemMenu.css";
 import data from "../../Data/menu.json";
 import {OptionsModal} from './OptionsModal'
 
@@ -13,7 +13,6 @@ class Itemenu extends Component {
       typefood: [],
       mealtime:'',
       addModalShow: false
-
     };
   }
 
@@ -26,6 +25,8 @@ class Itemenu extends Component {
   handleClick = (e, meal) => {
   e.preventDefault();
   console.log(`> Se ha Seleccionado: `, meal);
+  this.props.addItem(meal);
+  
   }
 
   render() {
@@ -54,10 +55,10 @@ class Itemenu extends Component {
             {data.filter(item => item.type ===`${mealt}`).map(filtertype => (
 
               <button onClick={e => this.handleClick(e, filtertype)} key={filtertype.objectID}
-              type= 'button' className='btn btn-light custom'>
+              type= 'button' className='btn btn-light custom d-flex flex-wrap justify-content-between'>
 
-                <a onClick={() => this.setState({addModalShow:true})}
-                  >{filtertype.name}</a>
+                <i onClick={() => this.setState({addModalShow:true})}
+                  >{filtertype.name}</i>
 
                   <OptionsModal
                   show={this.state.addModalShow}
