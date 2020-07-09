@@ -41,8 +41,8 @@ class InputContainer extends Component {
            <h2>nº Mesa</h2>
           <input
             type='number'
-            name='order'
-            value={this.state.order}
+            name='table'
+            value={this.state.table}
             onChange={this.handleChange} />
         </div>
         </form>

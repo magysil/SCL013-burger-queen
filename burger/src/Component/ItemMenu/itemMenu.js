@@ -63,7 +63,7 @@ class Itemenu extends Component {
                   show={this.state.addModalShow}
                   onHide={addModalClose} />
 
-              <span className="badge badge-primary badge-pill ml-2">{filtertype.price}</span>
+              <span className="badge badge-success badge-pill ml-2">{filtertype.price}</span>
               </button>
             ))}
             </div>
