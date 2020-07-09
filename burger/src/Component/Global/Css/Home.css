@@ -53,9 +53,10 @@ border-radius: 10px;
  h2 {
     color: #4F1011;
     font-family: 'Asap', sans-serif;
+    font-weight: 500;
     font-size: 1.5rem;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     text-decoration: none;
 }
 

@@ -1,6 +1,6 @@
 // Dependencies
 import React, { Component } from "react";
-import "../Global/Css/inputContainer.css";
+import "../Global/Css/InputContainer.css";
 
 class InputContainer extends Component {
     constructor (props) {

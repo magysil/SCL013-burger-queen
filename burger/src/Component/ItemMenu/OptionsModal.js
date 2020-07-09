@@ -28,9 +28,9 @@ export class OptionsModal extends Component {
       </Modal.Header>
       <Modal.Body>
         
-      <div className="container">
+      {/* <div className="container">
         <CheckboxContainer />
-      </div>
+      </div> */}
 
       </Modal.Body>
       <Modal.Footer>

@@ -8,7 +8,7 @@ class Total extends Component {
       <div className="Total">
         <h2 className="h2Total">TOTAL</h2>
         <input className="inputTotal" type="text"/>
-        <button className='btnEnviar'>Enviar a COCINA</button>
+        <button className='btnEnviar'>enviar a COCINA</button>
       </div>
     );
   }
