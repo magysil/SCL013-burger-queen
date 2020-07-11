@@ -57,8 +57,8 @@ class Itemenu extends Component {
               <button onClick={e => this.handleClick(e, filtertype)} key={filtertype.objectID}
               type= 'button' className='btn btn-light custom d-flex flex-wrap justify-content-between'>
 
-                <i onClick={() => this.setState({addModalShow:true})}
-                  >{filtertype.name}</i>
+                <p onClick={() => this.setState({addModalShow:true})}
+                  >{filtertype.name}</p>
 
                   <OptionsModal
                   show={this.state.addModalShow}

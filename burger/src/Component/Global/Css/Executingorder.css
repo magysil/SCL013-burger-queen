@@ -1,10 +1,11 @@
 .Executingorder {
-  min-height: 35vh;
+  min-height: 50vh;
   width: 60%!important;
 }
 
 .trashIcon{
   color: #E6221F;
+  cursor: pointer;
 }
 
 .aaa {
