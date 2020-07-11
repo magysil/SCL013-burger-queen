@@ -34,7 +34,7 @@ class Executingorder extends Component {
                <td className='aaa table-light'>1</td>
                <td className='aaa table-light'>{item.price}</td>
              </tr>
-              )})}
+               )})}
          </tbody>
         </table>
       </div>
