@@ -1,14 +1,14 @@
 // Dependencies
 import React, { Component } from "react";
-import "../Global/Css/ItemMenu.css";
+import "../Global/Css/itemMenu.css";
 import data from "../../Data/menu.json";
-import {OptionsModal} from './OptionsModal'
+//import {OptionsModal} from './OptionsModal'
 
 
 class Itemenu extends Component {
   constructor(props) {
     super(props);
-
+ 
     this.state = {
       typefood: [],
       mealtime:'',
@@ -17,7 +17,9 @@ class Itemenu extends Component {
   }
 
   componentDidMount() {
-    this.setState({typefood: data})
+    this.setState({
+      typefood: data
+    })
     console.log(data);
   }
 
@@ -25,9 +27,12 @@ class Itemenu extends Component {
   handleClick = (e, meal) => {
   e.preventDefault();
   console.log(`> Se ha Seleccionado: `, meal);
-  this.props.addItem(meal);
-  
-  }
+   if (typeof meal.options === "undefined" && typeof meal.extras === "undefined"){
+      this.props.addItem(meal);
+   }
+      this.setState ({ 
+      addModalShow: true, 
+  })};
 
   render() {
     const lunchmenu = () => {
@@ -36,7 +41,7 @@ class Itemenu extends Component {
     const breakfastmenu = () => {
       this.setState({mealtime:'desayuno'})
     }
-    const addModalClose = () => this.setState({addModalShow:false});
+    //const addModalClose = () => this.setState({addModalShow:false});
 
     const mealt = this.state.mealtime
     console.log(mealt);
@@ -60,9 +65,9 @@ class Itemenu extends Component {
                 <i onClick={() => this.setState({addModalShow:true})}
                   >{filtertype.name}</i>
 
-                  <OptionsModal
+                 {/*  <OptionsModal
                   show={this.state.addModalShow}
-                  onHide={addModalClose} />
+                  onHide={addModalClose} /> */}
 
               <span className="badge badge-success badge-pill ml-2">{filtertype.price}</span>
               </button>
