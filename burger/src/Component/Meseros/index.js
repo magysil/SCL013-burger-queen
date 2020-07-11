@@ -9,17 +9,18 @@ import Total from "../ItemMenu/Total";
 class Meseros extends Component {
 
   state = {
-    order: []
+    order: [],
+    total: 0
   };
 
   // Agregar items al pedido
-  addItem(item) {
+  addItem = (item) =>{
     this.setState(e => ({
-      order: [...e.order, item]
+      order: [...e.order, item],
     }));
-  } 
+  };
 
-   // Elimina item del pedido
+  // Elimina item del pedido
    deleteItem = i => {
     let order = [...this.state.order];
     order.splice(i, 1);
@@ -42,7 +43,9 @@ class Meseros extends Component {
           <Executingorder 
           totalItem={this.state.order}
           deleteItem={this.deleteItem.bind(this)} />
-          {<Total /> }
+          <Total 
+          orderPay={this.state.order}/>
+
           </div>
         </div>
       </div>
