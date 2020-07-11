@@ -1,6 +1,7 @@
 // Dependencies
 import React, { Component } from "react";
-import "../Global/Css/inputContainer.css";
+import "../Global/Css/InputContainer.css";
+//import numberOrder from "../../Data/numberOrder.json"
 
 class InputContainer extends Component {
     constructor (props) {
@@ -8,10 +9,13 @@ class InputContainer extends Component {
       this.state = {
         name: '',
         order: '',
-        table:''
+        table:'',
+        numberOrder:1,
       };
       this.handleChange = this.handleChange.bind(this)
     }
+
+
     handleChange (e) {
       const name = e.target.name;
       const value = e.target.value;
@@ -33,11 +37,7 @@ class InputContainer extends Component {
             </div>
            <div className='InputOrder'>
            <h2>nº Pedido</h2>
-          <input
-            type='number'
-            name='order'
-            value={this.state.order}
-            onChange={this.handleChange} />
+           <p className="pPedido">{this.state.numberOrder}</p>
         </div>
         <div className='InputMesa'>
            <h2>nº Mesa</h2>
