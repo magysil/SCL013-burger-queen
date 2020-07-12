@@ -14,14 +14,21 @@ class Total extends Component {
 
   sendKitchen = () => {
     console.log('Click.....')
+    
   }
+   // Envia indice a eliminar
+   sendOrder = () => {
+     this.props.sendOrder()
+     console.log('Click..... TOTAL')
+    }
+
   render() {
 
     return (
       <div className="Total">
         <h2 className="h2Total">TOTAL</h2>
         <p className="pTotal">${this.totalPay()}</p>
-        <button className="btnEnviar" onClick={() => this.sendKitchen()}>Enviar a COCINA</button>
+        <button className="btnEnviar" onClick={() => this.sendOrder()}>Enviar a COCINA</button>
       </div>
     );
   }

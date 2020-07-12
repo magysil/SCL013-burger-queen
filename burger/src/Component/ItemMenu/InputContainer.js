@@ -1,28 +1,42 @@
 // Dependencies
 import React, { Component } from "react";
 import "../Global/Css/InputContainer.css";
+import db from "../../ConfigDB/firebase"
 //import numberOrder from "../../Data/numberOrder.json"
 
 class InputContainer extends Component {
     constructor (props) {
       super(props);
       this.state = {
-        name: '',
-        order: '',
-        table:'',
-        numberOrder:1,
+        numberOrder:0,
+        factura:[]
       };
       this.handleChange = this.handleChange.bind(this)
     }
 
-
-    handleChange (e) {
-      const name = e.target.name;
-      const value = e.target.value;
-      this.setState({
-        [name]: value
+    componentDidMount(){
+      db.collection("facturas")
+      .orderBy("nfactura", "desc").onSnapshot((snapshots)=>{
+        this.setState({
+          factura: snapshots.docs.map(doc =>{
+            return {
+              nfactura: doc.data().nfactura
+            }
+          })
+        })
       })
+    }
+
+      handleChange (e) {
+      const value = e.target.value;
+      this.props.nameClient(value);
     };
+    
+      handleChanges = e => {
+      const table = e.target.value;
+      this.props.numTable(table);
+    }; 
+
     render () {
       return (
         <div className='InputContainer'>
@@ -32,8 +46,8 @@ class InputContainer extends Component {
           <input
             type='text'
             name='name'
-            value={this.state.name}
-            onChange={this.handleChange} />
+            value={this.props.name}
+            onChange={e => this.handleChange(e)} />
             </div>
            <div className='InputOrder'>
            <h2>nº Pedido</h2>
@@ -44,8 +58,8 @@ class InputContainer extends Component {
           <input
             type='number'
             name='table'
-            value={this.state.table}
-            onChange={this.handleChange} />
+            value={this.props.table}
+            onChange={e => this.handleChanges(e)} />
         </div>
         </form>
             </div>
