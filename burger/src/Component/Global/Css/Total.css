@@ -31,14 +31,12 @@
     .h2Total{
     font-weight: bold;
     text-align: end;
-    margin-right: -45px;
     font-size: 32px;
     margin-bottom: -5px;
     font-family: 'Asap Condensed', sans-serif;
-    
 }
 
-    .inputTotal { 
+    .inputTotal {
     width: 160px;
     height: 60px;
     font-size: 30px;
