@@ -7,7 +7,7 @@ import InputContainer from "../ItemMenu/InputContainer";
 import Total from "../ItemMenu/Total";
 
 class Meseros extends Component {
-
+// Parte vacio
   state = {
     order: []
   };
@@ -17,7 +17,7 @@ class Meseros extends Component {
     this.setState(e => ({
       order: [...e.order, item]
     }));
-  } 
+  }
 
    // Elimina item del pedido
    deleteItem = i => {
@@ -29,7 +29,10 @@ class Meseros extends Component {
   };
 
   render() {
-    console.log(this.state.order);
+    // Se crea const precios y let total con su funcion para sumar
+    const precios = this.state.order.map((item) => item.price);
+    let total = precios.reduce((a, b) => a + b, 0);
+
     return (
       <div className="Meseros">
       <div className="Menus">
@@ -39,10 +42,11 @@ class Meseros extends Component {
         <div className="Agregar">
           <InputContainer />
           <div className='ExecutingorderAndTotal'>
-          <Executingorder 
+          <Executingorder
           totalItem={this.state.order}
           deleteItem={this.deleteItem.bind(this)} />
-          {<Total /> }
+          <Total
+            total={total}/>
           </div>
         </div>
       </div>
