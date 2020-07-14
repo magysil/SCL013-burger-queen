@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import "../Global/Css/itemMenu.css";
 import data from "../../Data/menu.json";
-import {OptionsModal} from './OptionsModal'
+//import {OptionsModal} from './OptionsModal'
 
 
 class Itemenu extends Component {
@@ -16,7 +16,9 @@ class Itemenu extends Component {
   }
 
   componentDidMount() {
-    this.setState({typefood: data})
+    this.setState({
+      typefood: data
+    })
     console.log(data);
   }
 
@@ -34,10 +36,9 @@ class Itemenu extends Component {
     const breakfastmenu = () => {
       this.setState({mealtime:'desayuno'})
     }
+
     const addModalClose = () => this.setState({addModalShow:false});
     const openModal = () => this.setState({addModalShow:true})
-
-
     // States
     const {mealtime} = this.state;
     console.log(mealtime);
@@ -60,9 +61,9 @@ class Itemenu extends Component {
                 <p onClick={openModal}
                   >{filtertype.name}</p>
 
-                  <OptionsModal
+                 {/*  <OptionsModal
                   show={this.state.addModalShow}
-                  onHide={addModalClose} />
+                  onHide={addModalClose} /> */}
 
               <span className="badge badge-success badge-pill ml-2">{filtertype.price}</span>
               </button>
