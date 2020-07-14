@@ -32,7 +32,7 @@
     font-weight: bold;
     text-align: end;
     font-size: 32px;
-    margin-bottom: -5px;
+    margin-bottom: -1px;
     font-family: 'Asap Condensed', sans-serif;
 }
 
@@ -45,4 +45,12 @@
     margin-bottom: 0px;
     border-radius: 10px;
     color:  #4f1011 !important;
+}
+
+div .totalPrice {
+  background-color:white;
+  border-radius: 6px;
+  font-size:40px;
+  padding:8px;
+  margin:1px;
 }

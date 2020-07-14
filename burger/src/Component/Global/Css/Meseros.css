@@ -4,7 +4,7 @@
 
 .Menus {
   background-color: rgb(255, 255, 255);
-  min-height: 390px;
+  min-height: 360px;
   padding: 10px;
   text-align: center;
 }
@@ -49,3 +49,34 @@ input {
 .ExecutingorderAndTotal {
   display:flex;
 }
+
+
+@media only screen and (min-width: 900px) {
+  .Meseros {
+    height:1020px;
+  }
+    .ExecutingorderAndTotal {
+      min-height: 500px;
+ }
+}
+
+@media only screen and (min-width: 1200px) {
+  .Meseros {
+    height:1280px;
+  }
+    .ExecutingorderAndTotal {
+     min-height: 600px;
+ }
+}
+
+
+
+
+/* @media only screen and (min-width: 1200px) {
+  .Home {
+    height:1220px;
+  }
+  .Buttons {
+    width:350px;
+  }
+} */
