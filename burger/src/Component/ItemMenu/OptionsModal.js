@@ -7,17 +7,62 @@ import CheckboxContainer from './CheckboxContainer';
 export class OptionsModal extends Component {
   constructor(props) {
     super(props);
-    this.state = {
+  this.state = {
 
     };
   
   }
+    componentDidMount() {
+      this.setState({typefood: data})
+      console.log(data);
+    }
+
+    hideModal = () => {
+      this.setState({
+        typefood: [],
+        showModal: false,
+       currentMeal: null,
+        options: null,
+        extras: []
+      });
+    };
+  
+
+    handleChange = (event) => {
+    const value = event.target.name;
+    this.setState(previousState => ({
+      options: [...previousState.extras, value]
+    }));
+  }
+
+  // actualizar el estado del modal
+  addItem = () => {
+    if (this.state.option === null) {
+      return alert ('Tienes que escoger una de las opciones obligatorias')
+    }
+
+    const productModal = {
+      name: this.state.currentMeal.name,
+      price: this.state.currentMeal.price,
+      id: this.state.currentMeal.id,
+      option: this.state.option,
+      extras: this.state.extras
+    }
+    this.props.addOrder(productModal);
+    this.hideModal();
+  }
+  
+
+ 
+
+
+
   render () {
     const { label } = this.props;
     const { isChecked } = this.state;
     return (
       <Modal
-      {...this.props}
+      key={`modal-${data.objectID}`} show={this.state.showModal} onHide={() => this.hideModal()}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered>
@@ -31,6 +76,7 @@ export class OptionsModal extends Component {
       {/* <div className="container">
         <CheckboxContainer />
       </div> */}
+
 
       </Modal.Body>
       <Modal.Footer>
