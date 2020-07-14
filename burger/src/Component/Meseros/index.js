@@ -10,6 +10,7 @@ import db from "../../ConfigDB/firebase"
 class Meseros extends Component {
 
   state = {
+    nfactura: "",
     client: "",
     table: "",
     order: [],
@@ -46,21 +47,35 @@ numTable(tableNumber) {
       order: order
     });
   };
+
+  resetOrder() {
+    document.getElementById("clientName").value = '';
+    document.getElementById("clientTable").value = '';
+    this.setState({
+      client: "",
+      table: "",
+      order: []
+    });
+  }
+
   //Función que guarda los datos de la colección en firebase
   sendOrder() {
     db.collection('orders').add({
+      nfactura: '',
+      tipofac: 'factura',
       client: this.state.client,
       table: this.state.table,
       order: this.state.order,
       time: new Date(),
       status: 'preparando',
     })
-    .then((docRef) => {
-      //this.resetState();
-      console.log(docRef);
+    .then((doc) => {
+      console.log(doc);
+      console.log('Documento guardado exitosamente');
+      this.resetOrder();
     })
     .catch((error) => {
-      console.log('Error ', error);
+      console.log('Error al enviar ', error);
     });
   };
 
