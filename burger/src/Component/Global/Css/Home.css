@@ -9,33 +9,26 @@ background-color:#F4B200;
   display:flex;
   flex-direction: column;
   margin:0px auto;
-  margin-top: 90px;
-  width:70%;
+  margin-top: 100px;
+  width:75%;
   background-color:rgb(255, 255, 255);
-  height:740px;
-  padding:10px;
-  color:white;
-  border-radius:11px;
-  text-align:center;
+  height:760px;
   align-items: center;
+  justify-content:center;
+  border-radius: 20px;
 }
 
   .Logo, img {
-    height:230px;
-    padding: 20px;
+    height:240px;
+    margin-bottom: 17px
 }
 
 .Buttons {
     display: grid;
-    text-align: center;
-   height: 100px;
     grid-gap: 30px;
-     padding: 30px;
-    padding-top:70px;
-    border-radius: 5px;
-    width: 280px;
-    text-decoration: none;
-    border:none;
+    padding-top:60px;
+    width: 250px;
+
 }
 
 .NavLink {
@@ -53,9 +46,25 @@ border-radius: 10px;
  h2 {
     color: #4F1011;
     font-family: 'Asap', sans-serif;
+    font-weight: 500;
     font-size: 1.5rem;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     text-decoration: none;
 }
 
+@media only screen and (min-width: 1000px) {
+  .Home {
+    height:1020px;
+    width:80%
+ }
+}
+
+@media only screen and (min-width: 1200px) {
+  .Home {
+    height:1220px;
+  }
+  .Buttons {
+    width:350px;
+  }
+}

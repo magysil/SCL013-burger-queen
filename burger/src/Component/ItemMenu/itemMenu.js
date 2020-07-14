@@ -2,23 +2,23 @@
 import React, { Component } from "react";
 import "../Global/Css/itemMenu.css";
 import data from "../../Data/menu.json";
-import {OptionsModal} from './OptionsModal'
+//import {OptionsModal} from './OptionsModal'
 
 
 class Itemenu extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       typefood: [],
       mealtime:'',
-      addModalShow: false
-
+      addModalShow: false,
     };
   }
 
   componentDidMount() {
-    this.setState({typefood: data})
+    this.setState({
+      typefood: data
+    })
     console.log(data);
   }
 
@@ -26,6 +26,7 @@ class Itemenu extends Component {
   handleClick = (e, meal) => {
   e.preventDefault();
   console.log(`> Se ha Seleccionado: `, meal);
+  this.props.addItem(meal);
   }
 
   render() {
@@ -35,10 +36,12 @@ class Itemenu extends Component {
     const breakfastmenu = () => {
       this.setState({mealtime:'desayuno'})
     }
-    const addModalClose = () => this.setState({addModalShow:false});
 
-    const mealt = this.state.mealtime
-    console.log(mealt);
+    const addModalClose = () => this.setState({addModalShow:false});
+    const openModal = () => this.setState({addModalShow:true})
+    // States
+    const {mealtime} = this.state;
+    console.log(mealtime);
     return (
       <div className="Itemenu">
         <div className="contentbutton justify-content-center mb-2">
@@ -50,20 +53,19 @@ class Itemenu extends Component {
           </button>
         </div>
 
-          <div className="d-flex flex-wrap justify-content-between">
-            {data.filter(item => item.type ===`${mealt}`).map(filtertype => (
+          <div className="options">
+            {data.filter(item => item.type === mealtime).map(filtertype => (
 
               <button onClick={e => this.handleClick(e, filtertype)} key={filtertype.objectID}
               type= 'button' className='btn btn-light custom'>
+                <p onClick={openModal}
+                  >{filtertype.name}</p>
 
-                <a onClick={() => this.setState({addModalShow:true})}
-                  >{filtertype.name}</a>
-
-                  <OptionsModal
+                 {/*  <OptionsModal
                   show={this.state.addModalShow}
-                  onHide={addModalClose} />
+                  onHide={addModalClose} /> */}
 
-              <span className="badge badge-primary badge-pill ml-2">{filtertype.price}</span>
+              <span className="badge badge-success badge-pill ml-2">{filtertype.price}</span>
               </button>
             ))}
             </div>

@@ -1,0 +1,35 @@
+.Executingorder .container{
+  text-align:center;
+  min-height: 30vh;
+
+  width: 60%!important;
+}
+
+.Executingorder .btn {
+  width: 40%;
+  text-align: center;
+  font-size: 1.5em;
+  border-radius: 10px;
+}
+
+.trashIcon{
+  color: #E6221F;
+  cursor: pointer;
+}
+
+.aaa {
+  border: 5px solid #f4b200;
+}
+
+.tableHead{
+  border-top: 0px solid #dee2e6;
+}
+
+.table thead th{
+  border-bottom: 0px!important;
+  border-top: 0px!important;
+}
+
+.deleteItem{
+  border-top: 0px!important;
+}

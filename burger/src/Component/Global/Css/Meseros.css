@@ -1,52 +1,82 @@
 .Meseros {
-  text-align:center;
+  text-align: center;
 }
 
 .Menus {
   background-color: rgb(255, 255, 255);
-  height: 370px;
-  padding:20px;
-  text-align:center;
+  min-height: 360px;
+  padding: 10px;
+  text-align: center;
 }
 
 .Agregar {
-  padding:0px;
-  text-align:center;
-}
-
-.Executingorder .btn {
-width:40%;
-text-align:center;
-font-size:1.5em;
-border-radius: 10px;
+  padding: 0px;
+  text-align: center;
 }
 
 .InputContainer {
-padding:30px;
+  padding: 10px;
 }
 
 form {
-  display:flex;
-  flex-direction:row;
+  display: flex;
+  flex-direction: row;
+  padding:20px;
   justify-content: center;
 }
 
- .InputName h2, input {
-font-size:1.2em;
-border-radius: 10px;
-margin:10px;
-}
-
-.InputOrder h2 , input{
-font-size:1.2em;
-border-radius: 10px;
-margin:10px;
-}
-
-.InputMesa h2 , input {
-  font-size:1.2em;
+.InputName h2,
+input {
+  font-size: 1.2em;
   border-radius: 10px;
-  margin:10px;
+  margin: 10px;
+}
+
+.InputOrder h2,
+input {
+  font-size: 1.2em;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.InputMesa h2,
+input {
+  font-size: 1.2em;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.ExecutingorderAndTotal {
+  display:flex;
+}
+
+
+@media only screen and (min-width: 900px) {
+  .Meseros {
+    height:1020px;
   }
+    .ExecutingorderAndTotal {
+      min-height: 500px;
+ }
+}
+
+@media only screen and (min-width: 1200px) {
+  .Meseros {
+    height:1280px;
+  }
+    .ExecutingorderAndTotal {
+     min-height: 600px;
+ }
+}
 
 
+
+
+/* @media only screen and (min-width: 1200px) {
+  .Home {
+    height:1220px;
+  }
+  .Buttons {
+    width:350px;
+  }
+} */
