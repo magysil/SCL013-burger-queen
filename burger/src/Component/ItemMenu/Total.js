@@ -4,30 +4,18 @@ import "../Global/Css/Total.css";
 
 class Total extends Component {
 
-  totalPay = () => {
-    let sum = 0;
-    this.props.orderPay.forEach(data => 
-      {sum += data.price}
-      );
-    return sum;
-  };
-
-  sendKitchen = () => {
-    console.log('Click.....')
-    
-  }
-   // Envia indice a eliminar
+  // Envia indice a eliminar
    sendOrder = () => {
      this.props.sendOrder()
      console.log('Click..... TOTAL')
     }
 
   render() {
-
+     const {total}=this.props;
     return (
       <div className="Total">
         <h2 className="h2Total">TOTAL</h2>
-        <p className="pTotal">${this.totalPay()}</p>
+         <div>{total}</div>
         <button className="btnEnviar" onClick={() => this.sendOrder()}>Enviar a COCINA</button>
       </div>
     );
@@ -35,4 +23,4 @@ class Total extends Component {
 }
 
 export default Total;
- 
+

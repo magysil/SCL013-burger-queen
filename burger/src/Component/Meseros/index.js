@@ -8,7 +8,7 @@ import Total from "../ItemMenu/Total";
 import db from "../../ConfigDB/firebase"
 
 class Meseros extends Component {
-
+// Parte vacio
   state = {
     nfactura: "",
     client: "",
@@ -37,6 +37,7 @@ numTable(tableNumber) {
     this.setState(e => ({
       order: [...e.order, item],
     }));
+
   };
 
   // Elimina item del pedido
@@ -80,7 +81,10 @@ numTable(tableNumber) {
   };
 
   render() {
-    console.log(this.state.order);
+    // Se crea const precios y let total con su funcion para sumar
+    const precios = this.state.order.map((item) => item.price);
+    let total = precios.reduce((a, b) => a + b, 0);
+
     return (
       <div className="Meseros">
       <div className="Menus">
@@ -93,12 +97,14 @@ numTable(tableNumber) {
           numTable={this.numTable.bind(this)}
           />
           <div className='ExecutingorderAndTotal'>
-          <Executingorder 
+          <Executingorder
           totalItem={this.state.order}
           deleteItem={this.deleteItem.bind(this)} />
-          <Total 
-          orderPay={this.state.order}
+
+          <Total
+          total={total}/>
           sendOrder={this.sendOrder.bind(this)}/>
+
           </div>
         </div>
       </div>

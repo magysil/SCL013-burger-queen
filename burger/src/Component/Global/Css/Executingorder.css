@@ -1,10 +1,20 @@
 .Executingorder {
-  min-height: 50vh;
+  text-align:center;
+  min-height: 30vh;
+
   width: 60%!important;
+}
+
+.Executingorder .btn {
+  width: 40%;
+  text-align: center;
+  font-size: 1.5em;
+  border-radius: 10px;
 }
 
 .trashIcon{
   color: #E6221F;
+  cursor: pointer;
 }
 
 .aaa {
@@ -20,6 +30,6 @@
   border-top: 0px!important;
 }
 
-.deleteItem{ 
+.deleteItem{
   border-top: 0px!important;
 }

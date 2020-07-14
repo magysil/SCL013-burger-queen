@@ -8,11 +8,10 @@ import data from "../../Data/menu.json";
 class Itemenu extends Component {
   constructor(props) {
     super(props);
- 
     this.state = {
       typefood: [],
       mealtime:'',
-      addModalShow: false
+      addModalShow: false,
     };
   }
 
@@ -27,12 +26,8 @@ class Itemenu extends Component {
   handleClick = (e, meal) => {
   e.preventDefault();
   console.log(`> Se ha Seleccionado: `, meal);
-   if (typeof meal.options === "undefined" && typeof meal.extras === "undefined"){
-      this.props.addItem(meal);
-   }
-      this.setState ({ 
-      addModalShow: true, 
-  })};
+  this.props.addItem(meal);
+  }
 
   render() {
     const lunchmenu = () => {
@@ -41,10 +36,12 @@ class Itemenu extends Component {
     const breakfastmenu = () => {
       this.setState({mealtime:'desayuno'})
     }
-    //const addModalClose = () => this.setState({addModalShow:false});
 
-    const mealt = this.state.mealtime
-    console.log(mealt);
+    const addModalClose = () => this.setState({addModalShow:false});
+    const openModal = () => this.setState({addModalShow:true})
+    // States
+    const {mealtime} = this.state;
+    console.log(mealtime);
     return (
       <div className="Itemenu">
         <div className="contentbutton justify-content-center mb-2">
@@ -56,14 +53,13 @@ class Itemenu extends Component {
           </button>
         </div>
 
-          <div className="d-flex flex-wrap justify-content-between">
-            {data.filter(item => item.type ===`${mealt}`).map(filtertype => (
+          <div className="options">
+            {data.filter(item => item.type === mealtime).map(filtertype => (
 
               <button onClick={e => this.handleClick(e, filtertype)} key={filtertype.objectID}
-              type= 'button' className='btn btn-light custom d-flex flex-wrap justify-content-between'>
-
-                <i onClick={() => this.setState({addModalShow:true})}
-                  >{filtertype.name}</i>
+              type= 'button' className='btn btn-light custom'>
+                <p onClick={openModal}
+                  >{filtertype.name}</p>
 
                  {/*  <OptionsModal
                   show={this.state.addModalShow}

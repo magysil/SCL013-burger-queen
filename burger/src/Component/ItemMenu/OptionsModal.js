@@ -1,19 +1,16 @@
-import React, { Component } from 'react'
-import data from '../../Data/menu.json'
+import React, { Component, PropTypes } from 'react'
 import {Modal, Button} from 'react-bootstrap'
+import Checkbox from './Checkbox';
+import data from "../../Data/menu.json";
+import CheckboxContainer from './CheckboxContainer';
 
 export class OptionsModal extends Component {
-  // eslint-disable-next-line
   constructor(props) {
     super(props);
-    
-    this.state = {      
-      typefood: [],
-      showModal: false,
-     currentMeal: null,
-      option: null,
-      extras: []
+  this.state = {
+
     };
+  
   }
     componentDidMount() {
       this.setState({typefood: data})
@@ -61,7 +58,8 @@ export class OptionsModal extends Component {
 
 
   render () {
-    console.log(data);
+    const { label } = this.props;
+    const { isChecked } = this.state;
     return (
       <Modal
       key={`modal-${data.objectID}`} show={this.state.showModal} onHide={() => this.hideModal()}
@@ -74,21 +72,12 @@ export class OptionsModal extends Component {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <div className = 'container'>
-        <div className="col-6" onChange={event => this.handleChange(event)}>
-            <p>Elige el tipo:<span className='asterisk'>*</span></p>
-            {data.options.map(option => {
-              return (
-                <label className="container" key={option.id}>
-                  <input type="radio" name="RadioOption" value={option.name} required/>{" "}
-                  {option.name}
-                </label>
-              )
-            })}
-        </div>
-
         
-      </div>
+      {/* <div className="container">
+        <CheckboxContainer />
+      </div> */}
+
+
       </Modal.Body>
       <Modal.Footer>
         <Button variant = 'danger' onClick={this.props.onHide}>Close</Button>

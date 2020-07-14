@@ -4,8 +4,8 @@
 
 .Menus {
   background-color: rgb(255, 255, 255);
-  height: 370px;
-  padding: 20px;
+  min-height: 390px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -14,20 +14,14 @@
   text-align: center;
 }
 
-.Executingorder .btn {
-  width: 40%;
-  text-align: center;
-  font-size: 1.5em;
-  border-radius: 10px;
-}
-
 .InputContainer {
-  padding: 30px;
+  padding: 10px;
 }
 
 form {
   display: flex;
   flex-direction: row;
+  padding:20px;
   justify-content: center;
 }
 
