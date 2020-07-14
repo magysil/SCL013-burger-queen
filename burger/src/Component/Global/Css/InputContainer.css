@@ -1,0 +1,33 @@
+.InputContainer {
+  padding: 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.InputName h2,
+input {
+  font-size: 1.2em;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.InputOrder Input {
+  font-size: 1.2em;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.InputMesa h2,
+input {
+  font-size: 1.2em;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.pPedido{
+  background-color: #fff;
+}
