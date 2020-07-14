@@ -15,8 +15,8 @@ class Total extends Component {
     return (
       <div className="Total">
         <h2 className="h2Total">TOTAL</h2>
-         <div>{total}</div>
-        <button className="btnEnviar" onClick={() => this.sendOrder()}>Enviar a COCINA</button>
+        <div className='totalPrice'>${total}</div>
+        <button className='btnEnviar'>Enviar a COCINA</button>
       </div>
     );
   }
