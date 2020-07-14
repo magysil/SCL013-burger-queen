@@ -5,7 +5,7 @@ import Itemenu from "../ItemMenu/itemMenu";
 import Executingorder from "../ItemMenu/Executingorder";
 import InputContainer from "../ItemMenu/InputContainer";
 import Total from "../ItemMenu/Total";
-import db from "../../ConfigDB/firebase"
+import db from "../../configDB/firebase"
 
 class Meseros extends Component {
 // Parte vacio
@@ -102,8 +102,8 @@ numTable(tableNumber) {
           deleteItem={this.deleteItem.bind(this)} />
 
           <Total
-          total={total}/>
-          sendOrder={this.sendOrder.bind(this)}/>
+          total={total}
+          sendOrder={this.sendOrder.bind(this)} />
 
           </div>
         </div>

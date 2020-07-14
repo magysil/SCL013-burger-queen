@@ -37,8 +37,8 @@ class Itemenu extends Component {
       this.setState({mealtime:'desayuno'})
     }
 
-    const addModalClose = () => this.setState({addModalShow:false});
-    const openModal = () => this.setState({addModalShow:true})
+   /*  const addModalClose = () => this.setState({addModalShow:false});
+    const openModal = () => this.setState({addModalShow:true}) */
     // States
     const {mealtime} = this.state;
     console.log(mealtime);
@@ -58,7 +58,7 @@ class Itemenu extends Component {
 
               <button onClick={e => this.handleClick(e, filtertype)} key={filtertype.objectID}
               type= 'button' className='btn btn-light custom'>
-                <p onClick={openModal}
+                <p /* onClick={openModal} */
                   >{filtertype.name}</p>
 
                  {/*  <OptionsModal

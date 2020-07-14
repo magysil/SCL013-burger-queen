@@ -1,7 +1,7 @@
 // Dependencies
 import React, { Component } from "react";
 import "../Global/Css/InputContainer.css";
-import db from "../../ConfigDB/firebase";
+import db from "../../configDB/firebase";
 //import numberOrder from "../../Data/numberOrder.json"
 
 class InputContainer extends Component {
