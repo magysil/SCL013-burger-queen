@@ -115,7 +115,7 @@ A continuación puedes ver los objetivos de aprendizaje de este proyecto:
 ### JavaScript
 
 * [ ] Uso de condicionales (if-else | switch | operador ternario)
-* [ ] Uso de funciones (parámetros | argumentos | valor de retorno)
+* [X] Uso de funciones (parámetros | argumentos | valor de retorno)
 * [X] Manipular arrays (filter | map | sort | reduce)
 * [X] Manipular objects (key | value)
 * [X] Uso ES modules ([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
@@ -139,7 +139,7 @@ A continuación puedes ver los objetivos de aprendizaje de este proyecto:
 
 * [X] Uso de comandos de git (add | commit | pull | status | push)
 * [ ] Manejo de repositorios de GitHub (clone | fork | gh-pages)
-* [ ] Colaboración en Github (branches | pull requests | |tags)
+* [X] Colaboración en Github (branches | pull requests | |tags)
 * [ ] Organización en Github (projects | issues | labels | milestones)
 
 ### Firebase
@@ -164,12 +164,12 @@ A continuación puedes ver los objetivos de aprendizaje de este proyecto:
 ### React
 
 * [ ] [`JSX`](https://es.reactjs.org/docs/introducing-jsx.html)
-* [ ] [Componentes `class` y componentes `function`](https://es.reactjs.org/docs/components-and-props.html#function-and-class-components)
+* [X] [Componentes `class` y componentes `function`](https://es.reactjs.org/docs/components-and-props.html#function-and-class-components)
 * [X] `props`
 * [X] [Eventos en React.](https://es.reactjs.org/docs/handling-events.html)
 * [X] [Listas y keys.](https://es.reactjs.org/docs/lists-and-keys.html)
 * [ ] [Renderizado condicional.](https://es.reactjs.org/docs/conditional-rendering.html)
-* [ ] [Elevación de estados.](https://es.reactjs.org/docs/lifting-state-up.html)
+* [X] [Elevación de estados.](https://es.reactjs.org/docs/lifting-state-up.html)
 * [ ] [`hooks`](https://es.reactjs.org/docs/hooks-intro.html)
 * [X] [`CSS` modules.](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet)
 * [X] [React Router.](https://reacttraining.com/react-router/web)
