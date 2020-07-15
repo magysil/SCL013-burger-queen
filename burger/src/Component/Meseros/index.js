@@ -6,7 +6,6 @@ import Executingorder from "../ItemMenu/Executingorder";
 import InputContainer from "../ItemMenu/InputContainer";
 import Total from "../ItemMenu/Total";
 import db from "../../configDB/firebase";
-import Contador from '../ItemMenu/Contador';
 
 class Meseros extends Component {
 // Parte vacio
@@ -16,7 +15,8 @@ class Meseros extends Component {
     table: "",
     order: [],
     total: 0,
-    status:''
+    status:'',
+    time:''
   };
 
   // Cliente
@@ -95,8 +95,7 @@ numTable(tableNumber) {
         <div className="Agregar">
           <InputContainer
           nameClient={this.nameClient.bind(this)}
-          numTable={this.numTable.bind(this)}
-          />
+          numTable={this.numTable.bind(this)} />
           <div className='ExecutingorderAndTotal'>
           <Executingorder
           totalItem={this.state.order}
@@ -104,14 +103,7 @@ numTable(tableNumber) {
           <Total
           total={total}
           sendOrder={this.sendOrder.bind(this)}/>
-
-
-          {/* Esto hay que copiarlo al div vista cocina */}
-          <Contador
-          contador={total}
-          time={this.sendOrder.bind(this)}/>
           </div>
-
         </div>
       </div>
     );

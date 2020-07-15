@@ -1,35 +1,50 @@
 .Header {
-display:flex;
-flex-direction:row;
-text-align:left;
-background-color: white;
-padding:20px;
-}
+  display:flex;
+  flex-direction:row;
+  text-align:left;
+  background-color: white;
+  padding:20px;
+  }
 
-.Header a {
-    text-decoration: none;
-    padding-top:30px;
-}
+  .Header a {
+      text-decoration: none;
+  }
 
-.Header a:hover {
-    text-decoration: none;
-}
+  .Header a:hover {
+      text-decoration: none;
+  }
 
-.Header h2 {
-  color:rgb(255, 255, 255);
-}
+  .Header h2 {
+    align-items:left;
+    justify-items:right;
+    text-align:center;
+    color:rgb(255, 255, 255);
+  }
 
-.Header button {
-  background-color:#F4B200;
-  border-radius: 10px;
-  border:none;
-  color:rgb(255, 255, 255);
-  padding-top:10px;
-  width:125px;
-}
+  .Header button {
+    background-color:#F4B200;
+    border-radius: 10px;
+    border:none;
+    color:rgb(255, 255, 255);
+    padding-top:10px;
+    width:125px;
+  }
 
-.Logo2 img {
-padding-top:20px;
-height:100px;
-}
+  .Logo2 img {
+  height:85px;
+  }
 
+  .Header,.Clock div {
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+  }
+
+  .Clock div {
+    background-color:#eceae41c;
+    align-content:right;
+    justify-items:self-end;
+    border-radius: 10px;
+    text-align:right;
+    margin-top:30px;
+    color:#807c7c;
+  }

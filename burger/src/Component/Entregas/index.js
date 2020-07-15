@@ -1,7 +1,6 @@
 // Dependencies
 import React, { Component } from "react";
 import "../Global/Css/Entregas.css";
-
 import db from "../../configDB/firebase";
 
 class Entregas extends Component {
@@ -44,9 +43,8 @@ class Entregas extends Component {
   render() {
     return (
       <div className="Entregas">
+         <h2>Entregas</h2>
         <div className="Entregar">
-          <h2>Entregas</h2>
-
           <div className="options">
             {this.state.orders.map((comanda, i) => (
               <button
