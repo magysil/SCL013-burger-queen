@@ -68,7 +68,7 @@ numTable(tableNumber) {
       table: this.state.table,
       order: this.state.order,
       time: new Date(),
-      status: 'preparando',
+      status: 'espera',
     })
     .then((doc) => {
       console.log(doc);
@@ -100,11 +100,9 @@ numTable(tableNumber) {
           <Executingorder
           totalItem={this.state.order}
           deleteItem={this.deleteItem.bind(this)} />
-
           <Total
           total={total}
           sendOrder={this.sendOrder.bind(this)}/>
-
           </div>
         </div>
       </div>
