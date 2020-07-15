@@ -1,3 +1,6 @@
+// eslint-disable-next-line no-restricted-globals
+/* eslint no-restricted-globals:0 */
+
 // Dependencies
 import React, { Component } from "react";
 import "../Global/Css/Meseros.css";
@@ -61,7 +64,9 @@ numTable(tableNumber) {
 
   //Función que guarda los datos de la colección en firebase
   sendOrder() {
-    db.collection('orders').add({
+    const confirmSend = confirm('¿Está seguro de enviar el pedido a COCINA?');
+      if (confirmSend) {
+        db.collection('orders').add({
       nfactura: '',
       tipofac: 'factura',
       client: this.state.client,
@@ -78,6 +83,8 @@ numTable(tableNumber) {
     .catch((error) => {
       console.log('Error al enviar ', error);
     });
+      }
+    
   };
 
   render() {

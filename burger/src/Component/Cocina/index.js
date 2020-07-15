@@ -1,4 +1,6 @@
 /* eslint-disable no-unused-expressions */
+// eslint-disable-next-line no-restricted-globals
+/* eslint no-restricted-globals:0 */
 
 // Dependencies
 import React, { Component } from "react";
@@ -33,7 +35,9 @@ class Cocina extends Component {
     let actualizarOrder = db.collection("orders").doc(meal.id);
 
     if (meal.data.status === "espera") {
-      return actualizarOrder.update({
+      const startPreparation = confirm('¿Está seguro de iniciar la preparación?');
+      if (startPreparation) {
+        return actualizarOrder.update({
           status: "preparando",
         })
         .then(function () {
@@ -42,8 +46,12 @@ class Cocina extends Component {
         .catch(function (error) {
           console.error("Error al actualizar el documento:", error);
         });
+      }
+      
     } else {
-      return actualizarOrder.update({
+      const finishPreparation = confirm('¿Está seguro de finalizar la preparación?');
+      if (finishPreparation) {
+       return actualizarOrder.update({
           status: "listo",
         })
         .then(function () {
@@ -51,7 +59,9 @@ class Cocina extends Component {
         })
         .catch(function (error) {
           console.error("Error al actualizar el documento:", error);
-        });
+        }); 
+      }
+      
     }
   };
 
