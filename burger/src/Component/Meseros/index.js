@@ -5,7 +5,8 @@ import Itemenu from "../ItemMenu/itemMenu";
 import Executingorder from "../ItemMenu/Executingorder";
 import InputContainer from "../ItemMenu/InputContainer";
 import Total from "../ItemMenu/Total";
-import db from "../../configDB/firebase"
+import db from "../../configDB/firebase";
+import Contador from '../ItemMenu/Contador';
 
 class Meseros extends Component {
 // Parte vacio
@@ -92,7 +93,7 @@ numTable(tableNumber) {
          <Itemenu addItem={this.addItem.bind(this)}/>
         </div>
         <div className="Agregar">
-          <InputContainer 
+          <InputContainer
           nameClient={this.nameClient.bind(this)}
           numTable={this.numTable.bind(this)}
           />
@@ -105,7 +106,13 @@ numTable(tableNumber) {
           total={total}
           sendOrder={this.sendOrder.bind(this)}/>
 
+
+          {/* Esto hay que copiarlo al div vista cocina */}
+          <Contador
+          contador={total}
+          time={this.sendOrder.bind(this)}/>
           </div>
+
         </div>
       </div>
     );
