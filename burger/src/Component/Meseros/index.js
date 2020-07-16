@@ -5,7 +5,7 @@ import Itemenu from "../ItemMenu/itemMenu";
 import Executingorder from "../ItemMenu/Executingorder";
 import InputContainer from "../ItemMenu/InputContainer";
 import Total from "../ItemMenu/Total";
-import db from "../../configDB/firebase"
+import db from "../../configDB/firebase";
 
 class Meseros extends Component {
 // Parte vacio
@@ -15,7 +15,8 @@ class Meseros extends Component {
     table: "",
     order: [],
     total: 0,
-    status:''
+    status:'',
+    time:''
   };
 
   // Cliente
@@ -92,10 +93,9 @@ numTable(tableNumber) {
          <Itemenu addItem={this.addItem.bind(this)}/>
         </div>
         <div className="Agregar">
-          <InputContainer 
+          <InputContainer
           nameClient={this.nameClient.bind(this)}
-          numTable={this.numTable.bind(this)}
-          />
+          numTable={this.numTable.bind(this)} />
           <div className='ExecutingorderAndTotal'>
           <Executingorder
           totalItem={this.state.order}

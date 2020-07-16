@@ -3,18 +3,22 @@
 // Dependencies
 import React, { Component } from "react";
 import "../Global/Css/Cocina.css";
-
 import db from "../../configDB/firebase";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClock } from '@fortawesome/free-solid-svg-icons'
+import Clock from '../ItemMenu/Clock';
+import Timer from '../ItemMenu/Timer';
 
 class Cocina extends Component {
   state = {
     orders: [],
+    timer:''
   };
 
   componentDidMount() {
     // console.log('mounted')
     db.collection("orders")
-      .where("status", "in", ["espera", "preparando"])
+      .where("status", "in", ["espera", "preparando", 'time'])
       .onSnapshot((snapshot) => {
         const orders = [];
         snapshot.forEach((doc) => {
@@ -26,6 +30,7 @@ class Cocina extends Component {
         // console.log(orders)
       });
   }
+
   // Clicks para cambiar status
   handleClick = (e, meal) => {
     e.preventDefault();
@@ -60,15 +65,13 @@ class Cocina extends Component {
       <div className="Cocina">
         <div className="Pedidos">
           <h2>Pedidos</h2>
-
           <div className="options">
             {this.state.orders.map((comanda, i) => (
               <button
                 onClick={(e) => this.handleClick(e, comanda)}
                 key={i + 1}
                 type="button"
-                className="btn btn-light custom"
-              >
+                className="btn btn-light custom">
                 <p>{comanda.data.nfactura}</p>
                 <span>Mesa Nº: {comanda.data.table}</span>
                 <p>
@@ -77,14 +80,18 @@ class Cocina extends Component {
                     return <span key={i + 1}>{pedido.name}</span>;
                   })}
                 </p>
-                {comanda.data.status==='espera' ? 
+                {comanda.data.status==='espera' ?
                 <span className="badge badge-danger badge-pill ml-2">
                   Estado: {comanda.data.status}
-                </span>: 
+                </span>:
                 <span className="badge badge-warning badge-pill ml-2">
                   Estado: {comanda.data.status}
                 </span>}
-                
+             <div className='Time'>
+             <FontAwesomeIcon icon={faClock} />
+             <Timer />
+           {/* {timer}  */}
+            </div>
               </button>
             ))}
           </div>

@@ -2,12 +2,11 @@
   background-color: rgb(255, 255, 255);
   padding:20px;
   text-align:center;
-  height: 820px;
+  height: 800px;
   margin:0 auto;
 }
 
 .Entregar {
-  display:grid;
   padding:20px;
   text-align:center;
 }

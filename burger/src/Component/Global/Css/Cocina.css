@@ -2,14 +2,18 @@
   background-color: rgb(255, 255, 255);
   padding:20px;
   text-align:center;
-  height: 820px;
+  height: 800px;
   margin:0 auto;
 }
 
- .Pedidos {
-  display:grid;
+.Pedidos {
   padding:20px;
   text-align:center;
+}
+
+.options {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 
