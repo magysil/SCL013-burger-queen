@@ -28,12 +28,12 @@ class Cocina extends Component {
         // console.log(orders)
       });
   }
+  
   // Clicks para cambiar status
   handleClick = (e, meal) => {
     e.preventDefault();
     console.log(`> Se ha Seleccionado: `, meal.id);
     let actualizarOrder = db.collection("orders").doc(meal.id);
-
     if (meal.data.status === "espera") {
       const startPreparation = confirm('¿Está seguro de iniciar la preparación?');
       if (startPreparation) {
@@ -75,7 +75,7 @@ class Cocina extends Component {
             {this.state.orders.map((comanda, i) => (
               <button
                 onClick={(e) => this.handleClick(e, comanda)}
-                key={i + 1}
+                key={i+1}
                 type="button"
                 className="btn btn-light custom"
               >
@@ -84,7 +84,7 @@ class Cocina extends Component {
                 <p>
                   Pedido:{" "}
                   {comanda.data.order.map((pedido, i) => {
-                    return <span key={i + 1}>{pedido.name}</span>;
+                    return <span key={i+1}>{pedido.name}</span>;
                   })}
                 </p>
                 {comanda.data.status==='espera' ? 
