@@ -36,15 +36,15 @@
 
   .Header,.Clock div {
     display:grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 6fr 1fr;
   }
 
-  .Clock div {
-    background-color:#eceae41c;
+  .Clock div h3 {
+    background-color:#e0ded61c;
     align-content:right;
     justify-items:self-end;
     border-radius: 10px;
     text-align:right;
-    margin-top:30px;
+    margin:30px;
     color:#807c7c;
   }

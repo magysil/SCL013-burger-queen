@@ -20,10 +20,10 @@ class Header extends Component {
      <img src={logo2} alt='logo2' />
      <Link to={'/'}><button><h2>{title}</h2></button></Link>
      </div>
-    <div className='Clock'>
+    <span className='Clock'>
     <Clock />
      {/* {clock}  */}
-     </div>
+     </span>
      </div>
       );
     }
