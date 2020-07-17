@@ -54,4 +54,6 @@ div .totalPrice {
   font-size:40px;
   padding:8px;
   margin:1px;
+  width: 160px!important;
+  text-align: end;
 }
