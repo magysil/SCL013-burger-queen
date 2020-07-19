@@ -17,7 +17,8 @@ class Cocina extends Component {
   componentDidMount() {
     // console.log('mounted')
     db.collection("orders")
-      .where("status", "in", ["espera", "preparando", 'time'])
+      .where("status", "in", ["espera", "preparando", "time"])
+      .orderBy("time", "asc")
       .onSnapshot((snapshot) => {
         const orders = [];
         snapshot.forEach((doc) => {
@@ -41,7 +42,9 @@ class Cocina extends Component {
         status: "preparando",
       })
         .then(function () {
-          console.log("Documento de espera a preparando actualizado con éxito!");
+          console.log(
+            "Documento de espera a preparando actualizado con éxito!"
+          );
         })
         .catch(function (error) {
           console.error("Error al actualizar el documento:", error);
@@ -88,7 +91,7 @@ class Cocina extends Component {
       <div className="Cocina">
         <div className="Pedidos">
           <h2>Pedidos</h2>
-          <div className="options">
+          <div className="order-container">
             {this.state.orders.map((comanda, i) => (
               <button
                 onClick={(e) => this.handleClick(e, comanda)}
