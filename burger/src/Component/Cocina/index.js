@@ -1,24 +1,24 @@
 /* eslint-disable no-unused-expressions */
-
 // Dependencies
 import React, { Component } from "react";
 import "../Global/Css/Cocina.css";
 import db from "../../configDB/firebase";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock } from '@fortawesome/free-solid-svg-icons'
-import Clock from '../ItemMenu/Clock';
 import Timer from '../ItemMenu/Timer';
+
 
 class Cocina extends Component {
   state = {
     orders: [],
-    timer:''
+    time: ''
   };
 
   componentDidMount() {
     // console.log('mounted')
     db.collection("orders")
-      .where("status", "in", ["espera", "preparando", 'time'])
+      .where("status", "in", ["espera", "preparando", "time"])
+      .orderBy("time", "asc")
       .onSnapshot((snapshot) => {
         const orders = [];
         snapshot.forEach((doc) => {
@@ -39,18 +39,20 @@ class Cocina extends Component {
 
     if (meal.data.status === "espera") {
       return actualizarOrder.update({
-          status: "preparando",
-        })
+        status: "preparando",
+      })
         .then(function () {
-          console.log("Documento de espera a preparando actualizado con éxito!");
+          console.log(
+            "Documento de espera a preparando actualizado con éxito!"
+          );
         })
         .catch(function (error) {
           console.error("Error al actualizar el documento:", error);
         });
     } else {
       return actualizarOrder.update({
-          status: "listo",
-        })
+        status: "listo",
+      })
         .then(function () {
           console.log("Documento de preparando a listo actualizado con éxito!");
         })
@@ -60,7 +62,31 @@ class Cocina extends Component {
     }
   };
 
+
+
   render() {
+
+    const getOrderDate = (timestamp) => {
+      let unix_timestamp = timestamp
+      // Create a new JavaScript Date object based on the timestamp
+      // multiplied by 1000 so that the argument is in milliseconds, not seconds.
+
+      // new Date() => retorna fecha y hora actual
+      // var date => Convierte el timestamp a formato fecha correspondiente.
+      var date = new Date(unix_timestamp * 1000);
+      // Hours part from the timestamp
+      var hours = date.getHours();
+      // Minutes part from the timestamp
+      var minutes = "0" + date.getMinutes();
+      // Seconds part from the timestamp
+      var seconds = "0" + date.getSeconds();
+
+      // Will display time in 10:30:23 format
+      var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+
+      return formattedTime;
+    }
+
     return (
       <div className="Cocina">
         <div className="Pedidos">
@@ -71,27 +97,31 @@ class Cocina extends Component {
                 onClick={(e) => this.handleClick(e, comanda)}
                 key={i + 1}
                 type="button"
-                className="order-boxes">
-                <p className="title-box">{comanda.data.nfactura}</p>
-                <span className="title-table">Mesa Nº: {comanda.data.table}</span>
-                <p className="order-content">
-                  Pedido:{" "}
-                  {comanda.data.order.map((pedido, i) => {
-                    return <span key={i + 1}>{pedido.name}</span>;
-                  })}
-                </p>
-                {comanda.data.status==='espera' ?
-                <span className="badge badge-danger badge-pill ml-2">
-                  Estado: {comanda.data.status}
-                </span>:
-                <span className="badge badge-warning badge-pill ml-2">
-                  Estado: {comanda.data.status}
-                </span>}
-             <div className='Time'>
-             <FontAwesomeIcon icon={faClock} />
-             <Timer />
-           {/* {timer}  */}
-            </div>
+                className="btn btn-light custom">
+
+                <p>{comanda.data.nfactura}</p>
+
+                <span>Mesa Nº: {comanda.data.table}</span>
+
+                <p>Pedido:{" "} {comanda.data.order.map((pedido, i) => {
+                  return <span key={i + 1}>{pedido.name}<br></br></span>;
+                   })}</p>
+
+                <p>Hora de ingreso {getOrderDate(comanda.data.time.seconds)}</p>
+
+                {comanda.data.status === 'espera' ?
+                  <span className="badge badge-danger badge-pill ml-2">
+                    Estado: {comanda.data.status}
+                  </span> :
+
+                  <span className="badge badge-warning badge-pill ml-2">
+                    Estado: {comanda.data.status}
+                  </span>}
+
+                <div className='Time'>
+                  <FontAwesomeIcon icon={faClock} />
+                  <Timer timeStamp={comanda.data.time.seconds} />
+                </div>
               </button>
             ))}
           </div>

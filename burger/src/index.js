@@ -7,9 +7,9 @@ import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
-    <BrowserRouter>
-      <AppRoutes />
-    </BrowserRouter>,
+  <BrowserRouter>
+    <AppRoutes />
+  </BrowserRouter>,
   document.getElementById("root")
 );
 

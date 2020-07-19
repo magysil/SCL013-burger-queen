@@ -60,6 +60,13 @@ numTable(tableNumber) {
     });
   }
 
+   // Time
+time() {
+  this.setState({
+    time:''
+  });
+}
+
   //Función que guarda los datos de la colección en firebase
   sendOrder() {
     db.collection('orders').add({

@@ -1,6 +1,7 @@
 {
   "projects": {
     "burger": "burgerqueen-615be",
-    "default": "burgerqueen-615be"
+    "default": "burgerqueen-615be",
+    "staging": "burgerqueen-615be"
   }
 }
