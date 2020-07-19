@@ -4,21 +4,22 @@
 import React, { Component } from "react";
 import "../Global/Css/Cocina.css";
 import db from "../../configDB/firebase";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClock } from '@fortawesome/free-solid-svg-icons'
-import Clock from '../ItemMenu/Clock';
-import Timer from '../ItemMenu/Timer';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock } from "@fortawesome/free-solid-svg-icons";
+import Clock from "../ItemMenu/Clock";
+import Timer from "../ItemMenu/Timer";
 
 class Cocina extends Component {
   state = {
     orders: [],
-    timer:''
+    timer: "",
   };
 
   componentDidMount() {
     // console.log('mounted')
     db.collection("orders")
-      .where("status", "in", ["espera", "preparando", 'time'])
+      .where("status", "in", ["espera", "preparando", "time"])
+      .orderBy("time", "asc")
       .onSnapshot((snapshot) => {
         const orders = [];
         snapshot.forEach((doc) => {
@@ -38,17 +39,21 @@ class Cocina extends Component {
     let actualizarOrder = db.collection("orders").doc(meal.id);
 
     if (meal.data.status === "espera") {
-      return actualizarOrder.update({
+      return actualizarOrder
+        .update({
           status: "preparando",
         })
         .then(function () {
-          console.log("Documento de espera a preparando actualizado con éxito!");
+          console.log(
+            "Documento de espera a preparando actualizado con éxito!"
+          );
         })
         .catch(function (error) {
           console.error("Error al actualizar el documento:", error);
         });
     } else {
-      return actualizarOrder.update({
+      return actualizarOrder
+        .update({
           status: "listo",
         })
         .then(function () {
@@ -71,7 +76,8 @@ class Cocina extends Component {
                 onClick={(e) => this.handleClick(e, comanda)}
                 key={i + 1}
                 type="button"
-                className="btn btn-light custom">
+                className="btn btn-light custom"
+              >
                 <p>{comanda.data.nfactura}</p>
                 <span>Mesa Nº: {comanda.data.table}</span>
                 <p>
@@ -80,18 +86,20 @@ class Cocina extends Component {
                     return <span key={i + 1}>{pedido.name}</span>;
                   })}
                 </p>
-                {comanda.data.status==='espera' ?
-                <span className="badge badge-danger badge-pill ml-2">
-                  Estado: {comanda.data.status}
-                </span>:
-                <span className="badge badge-warning badge-pill ml-2">
-                  Estado: {comanda.data.status}
-                </span>}
-             <div className='Time'>
-             <FontAwesomeIcon icon={faClock} />
-             <Timer />
-           {/* {timer}  */}
-            </div>
+                {comanda.data.status === "espera" ? (
+                  <span className="badge badge-danger badge-pill ml-2">
+                    Estado: {comanda.data.status}
+                  </span>
+                ) : (
+                  <span className="badge badge-warning badge-pill ml-2">
+                    Estado: {comanda.data.status}
+                  </span>
+                )}
+                <div className="Time">
+                  <FontAwesomeIcon icon={faClock} />
+                  <Timer />
+                  {/* {timer}  */}
+                </div>
               </button>
             ))}
           </div>
