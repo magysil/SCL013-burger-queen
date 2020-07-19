@@ -48,3 +48,23 @@
     margin:30px;
     color:#807c7c;
   }
+
+
+/* Desktop */
+@media only screen and (min-width: 1221px)  and (orientation: landscape) {
+  .Logo2 img {
+    height:90px;
+    padding:5px;
+    padding-bottom:31px
+    }
+    .Header {
+      padding:5px;
+    }
+    .Header button {
+      width:100px;
+      margin-bottom:50px;
+    }
+    .Header h2 {
+      font-size:20px;
+    }
+}
