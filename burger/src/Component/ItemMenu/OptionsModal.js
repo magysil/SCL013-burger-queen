@@ -10,7 +10,7 @@ export class OptionsModal extends Component {
   this.state = {
 
     };
-  
+
   }
     componentDidMount() {
       this.setState({typefood: data})
@@ -26,7 +26,7 @@ export class OptionsModal extends Component {
         extras: []
       });
     };
-  
+
 
     handleChange = (event) => {
     const value = event.target.name;
@@ -51,9 +51,9 @@ export class OptionsModal extends Component {
     this.props.addOrder(productModal);
     this.hideModal();
   }
-  
 
- 
+
+
 
 
 
@@ -72,7 +72,7 @@ export class OptionsModal extends Component {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        
+
       {/* <div className="container">
         <CheckboxContainer />
       </div> */}

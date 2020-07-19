@@ -1,44 +1,36 @@
 import React, { Component, useState, useEffect } from 'react';
+import moment from 'moment';
 
-import "../Global/Css/Cocina.css";
 
-const Timer = () => {
-  const [seconds, setSeconds] = useState(0);
-  const [isActive, setIsActive] = useState(false);
+const Timer = ({ timeStamp }) => {
+  const [seconds, setSeconds] = useState('');
+  const [formattedTime, setFormattedTime] = useState(true);
 
-  function toggle() {
-    setIsActive(!isActive);
-  }
-
-  function reset() {
-    setSeconds(0);
-    setIsActive(false);
-  }
-
+  // timer que se ejecuta cada 1 segundo
   useEffect(() => {
     let interval = null;
-    if (isActive) {
-      interval = setInterval(() => {
-        setSeconds(seconds => seconds + 1);
-      }, 1000);
-    } else if (!isActive && seconds !== 0) {
-      clearInterval(interval);
-    }
+    interval = setInterval(() => {
+      setSeconds(seconds => seconds + 1);
+    }, 1000);
+
     return () => clearInterval(interval);
-  }, [isActive, seconds]);
+  }, [seconds]);
+
+
+  // asigna un string con el formato HH:mm:ss al estado 'formattedTime', se ejecuta cada vez que cambia el estado 'seconds'
+  useEffect(() => {
+    const creationDate = new Date(timeStamp * 1000);
+    const currentDate = new Date();
+    const diff = currentDate - creationDate;
+    const formatted = moment("1900-01-01 00:00:00").add(diff / 1000, 'seconds').format("HH:mm:ss")
+    setFormattedTime(formatted);
+  }, [seconds])
+
 
   return (
     <div className="app">
       <div className="time">
-        {seconds}s
-      </div>
-      <div className="row">
-        <button className={`button button-primary button-primary-${isActive ? 'active' : 'inactive'}`} onClick={toggle}>
-          {isActive ? 'Pause' : 'Start'}
-        </button>
-        <button className="button" onClick={reset}>
-          Reset
-        </button>
+        {formattedTime}
       </div>
     </div>
   );

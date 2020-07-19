@@ -15,16 +15,12 @@ class Header extends Component {
   render() {
     const { title } = this.props;
     return (
-      <div className="Header">
-        <div className="Logo2">
-          <img src={logo2} alt="logo2" />
-          <Link to={"/"}>
-            <button>
-              <h2>{title}</h2>
-            </button>
-          </Link>
+      <div className='Header'>
+        <div className='Logo2'>
+          <img src={logo2} alt='logo2' />
+          <Link to={'/'}><button><h2>{title}</h2></button></Link>
         </div>
-        <div className="Clock">
+        <div className='Clock'>
           <Clock />
           {/* {clock}  */}
         </div>

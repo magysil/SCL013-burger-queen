@@ -5,7 +5,7 @@
 .Menus {
   background-color: rgb(255, 255, 255);
   min-height: 360px;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
 }
 
@@ -14,15 +14,13 @@
   text-align: center;
 }
 
-.InputContainer {
-  padding: 10px;
+.ExecutingorderAndTotal {
+  display:flex;
+ min-height:300px;
 }
 
-form {
-  display: flex;
-  flex-direction: row;
-  padding:20px;
-  justify-content: center;
+.InputContainer {
+  padding: 10px;
 }
 
 .InputName h2,
@@ -43,40 +41,29 @@ input {
 input {
   font-size: 1.2em;
   border-radius: 10px;
-  margin: 10px;
-}
-
-.ExecutingorderAndTotal {
-  display:flex;
+  margin: 300px;
 }
 
 
-@media only screen and (min-width: 900px) {
-  .Meseros {
-    height:1020px;
-  }
-    .ExecutingorderAndTotal {
-      min-height: 500px;
- }
-}
-
-@media only screen and (min-width: 1200px) {
-  .Meseros {
+ /* I Pad Pro */
+@media only screen and (min-height: 1025px) and (max-height: 3160px) {
+  .Menu {
     height:1280px;
   }
-    .ExecutingorderAndTotal {
-     min-height: 600px;
- }
+  .Meseros {
+    min-height:1080px;
+  }
+  .ExecutingorderAndTotal {
+   min-height:500px;
+}
 }
 
-
-
-
-/* @media only screen and (min-width: 1200px) {
-  .Home {
-    height:1220px;
+/* Desktop */
+@media only screen and ( min-width: 1221px ) and ( orientation: landscape ) {
+   .Meseros {
+    min-height:770px;
   }
-  .Buttons {
-    width:350px;
-  }
-} */
+  .Menu {
+    padding:0px;
+}
+}

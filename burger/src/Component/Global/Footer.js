@@ -11,14 +11,14 @@ class Footer extends Component {
     copyright: propTypes.string
   };
 
-    render() {
-      const { copyright = 'Burger Queen &copy; Laboratoria 2020' } = this.props;
+  render() {
+    const { copyright = 'Burger Queen &copy; Laboratoria 2020' } = this.props;
     return (
       <div className='Footer'>
-     <h4 dangerouslySetInnerHTML={{__html: copyright }}/>
-    </div>
-      );
-    }
-    }
-  
-  export default Footer;
+        <h4 dangerouslySetInnerHTML={{ __html: copyright }} />
+      </div>
+    );
+  }
+}
+
+export default Footer;
