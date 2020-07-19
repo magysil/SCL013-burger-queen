@@ -48,7 +48,13 @@ You can rename the current file by clicking the file name in the navigation bar 
 
 ## 5. Cómo utilizar la plataforma
 
-La página de inicio de la aplicación tiene 3 botones que corresponden a las
+La página de inicio de la aplicación tiene 3 botones que corresponden a las áreas del restaurant que manejan las órdenes que entran a la cocina, se preparan y serán entregadas a los clientes, respectivamente. 
+
+El área de Meseros muestra el menú de Desayuno y Almuerzo que Burger Queen ofrece a sus comensales. Al tomar la orden, el mesero selecciona lo que el cliente desea desde la tablet, ingresa el nombre y la mesa que está atendiendo, y en seguida en la pantalla le muestra un resumen de la orden junto con el valor total de lo que se consumirá. Para terminar la orden y enviar a la Cocina para que se empiece a preparar el mesero debe presionar el botón "Enviar a Cocina".
+
+En Cocina, llega la orden recién ingresada a un listado con un contador adjunto que mide el tiempo que se demora en prepararse desde que llegó y con un estado "en espera" destacado en rojo. Las órdenes más antiguas van al principio y las que recién van llegando quedan al final. Cuando el personal de cocina quiere tomar una orden para empezar a prepararla debe presionar el recuadro que contiene la orden deseada, lo cual cambiará su estado a "preparando" en amarillo. Cuando el pedido ya está listo para ser entregado al cliente, se debe presionar una vez más para sacarlo de la pantalla de Cocina y que llegue a la de Entregas, para que el mesero sepa que está terminado y pueda entregarlo.
+
+Por último, en Entregas, el mesero puede ver un listado de las órdenes que ya están preparadas y listas, distinguidas con un estado "listo" en verde sobre ellas. Luego de entregar el pedido al cliente debe presionar la orden en la pantalla y ésta desaparecerá, finalizando la acción.
 
 ## 6. Testeos
 
@@ -56,7 +62,7 @@ La página de inicio de la aplicación tiene 3 botones que corresponden a las
 
 # 7. Pruebas unitarias
 
-Synchronization is one of the biggest features of StackEdit. It enables you to synchronize any file in your workspace with other files stored in your **Google Drive**, your **Dropbox** and your **GitHub** accounts. This allows you to keep writing on other devices, collaborate with people you share the file with, integrate easily into your workflow... The synchronization mechanism takes place every minute in the background, downloading, merging, and uploading file modifications.
+![bq-paletadecolores](https://raw.githubusercontent.com/ivvnv/SCL013-burger-queen/master/burger/src/Component/Global/Images/bq-paleta.png)
 
 ## 8. Checklist
 
@@ -85,7 +91,7 @@ Synchronization is one of the biggest features of StackEdit. It enables you to s
 
 ### Testing
 
-* [ ] [Testeo unitario.](https://jestjs.io/docs/es-ES/getting-started)
+* [X] [Testeo unitario.](https://jestjs.io/docs/es-ES/getting-started)
 
   
 ### Estructura del código y guía de estilo
@@ -94,7 +100,7 @@ Synchronization is one of the biggest features of StackEdit. It enables you to s
 
 * [X] Organizar y dividir el código en módulos (Modularización)
 * [X] Uso de identificadores descriptivos (Nomenclatura | Semántica)
-* [ ] Uso de linter (ESLINT)
+* [X] Uso de linter (ESLINT)
 
   
 ### Git y Github
@@ -102,17 +108,17 @@ Synchronization is one of the biggest features of StackEdit. It enables you to s
   
 
 *  [X] Uso de comandos de git (add | commit | pull | status | push)
-* [ ] Manejo de repositorios de GitHub (clone | fork | gh-pages)
+* [X] Manejo de repositorios de GitHub (clone | fork | gh-pages)
 *  [X] Colaboración en Github (branches | pull requests | |tags)
 * [ ] Organización en Github (projects | issues | labels | milestones)
 
   
 ### Firebase
 
-* [ ] [Firestore.](https://firebase.google.com/docs/firestore)
+* [X] [Firestore.](https://firebase.google.com/docs/firestore)
 * [ ] [Firebase Auth.](https://firebase.google.com/docs/auth/web/start)
 * [ ] [Firebase security rules.](https://firebase.google.com/docs/rules)
-* [ ] Observadores. ([onAuthStateChanged](https://firebase.google.com/docs/auth/web/manage-users?hl=es#get_the_currently_signed-in_user) | [onSnapshot](https://firebase.google.com/docs/firestore/query-data/listen#listen_to_multiple_documents_in_a_collection))
+* [X] Observadores. ([onAuthStateChanged](https://firebase.google.com/docs/auth/web/manage-users?hl=es#get_the_currently_signed-in_user) | [onSnapshot](https://firebase.google.com/docs/firestore/query-data/listen#listen_to_multiple_documents_in_a_collection))
 
 
 ### React
