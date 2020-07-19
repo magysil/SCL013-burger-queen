@@ -1,13 +1,12 @@
 .Cocina {
   background-color: rgb(255, 255, 255);
-  padding:20px;
+  padding:10px;
   text-align:center;
-  height: 800px;
+  min-height: 800px;
   margin:0 auto;
 }
 
 .Pedidos {
-  padding:20px;
   text-align:center;
 }
 
@@ -17,14 +16,19 @@
 }
 
 
-@media only screen and (min-width: 1000px) {
+ /* I Pad Pro */
+@media only screen and (min-height: 1025px) and (max-height: 3160px) {
   .Cocina {
-    height:1160px;
+    min-height:1170px;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+/* Desktop */
+@media only screen and (min-width: 1221px) and (orientation: landscape) {
   .Cocina {
-    height:1290px;
+    min-height:630px;
+  }
+  .options {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }

@@ -47,7 +47,7 @@ class InputContainer extends Component {
     console.log(cantidad);
     this.state.numberOrder = cantidad;
   };
-  
+
 
   render() {
     this.pedido();

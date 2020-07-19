@@ -58,7 +58,7 @@ class Entregas extends Component {
                 <p>
                   Pedido:{" "}
                   {comanda.data.order.map((pedido, i) => {
-                    return <span key={i + 1}>{pedido.name}</span>;
+                    return <span key={i + 1}>{pedido.name}<br></br></span>;
                   })}
                 </p>
                 <span className="badge badge-success badge-pill ml-2">
