@@ -2,14 +2,14 @@
 
 .Entregas {
   background-color: rgb(255, 255, 255);
-  padding:20px;
+  padding:10px;
   text-align:center;
   height: 100%;
   margin:0 auto;
 }
 
 .Entregar {
-  padding:20px;
+  padding:10px;
   text-align:center;
 }
 
@@ -53,14 +53,21 @@
 }
 
 
-@media only screen and (min-width: 1000px) {
+ /* I Pad Pro */
+@media only screen and (min-height: 1025px) and (max-height: 3160px) {
   .Entregas {
-    height: 100%;
+   min-height:1160px;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+/* Desktop */
+@media only screen and (min-width: 1221px)  and (orientation: landscape) {
   .Entregas {
-    height: 100%;
+    min-height:680px;
+    padding:0px;
   }
-}
+  .Entregar {
+    padding:0px;
+  }
+  }
+

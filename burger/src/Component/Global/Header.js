@@ -13,20 +13,20 @@ class Header extends Component {
     title: propTypes.string.isRequired,
   };
   render() {
-  const { title } = this.props;
+    const { title } = this.props;
     return (
-     <div className='Header'>
-     <div className='Logo2'>
-     <img src={logo2} alt='logo2' />
-     <Link to={'/'}><button><h2>{title}</h2></button></Link>
-     </div>
-    <div className='Clock'>
-    <Clock />
-     {/* {clock}  */}
-     </div>
-     </div>
-      );
-    }
-    }
+      <div className='Header'>
+        <div className='Logo2'>
+          <img src={logo2} alt='logo2' />
+          <Link to={'/'}><button><h2>{title}</h2></button></Link>
+        </div>
+        <div className='Clock'>
+          <Clock />
+          {/* {clock}  */}
+        </div>
+      </div>
+    );
+  }
+}
 
-  export default Header;
+export default Header;
