@@ -1,5 +1,7 @@
 import React, { Component, useState, useEffect } from 'react';
 
+import "../Global/Css/Cocina.css";
+
 const Timer = () => {
   const [seconds, setSeconds] = useState(0);
   const [isActive, setIsActive] = useState(false);

@@ -70,17 +70,16 @@ class Cocina extends Component {
       <div className="Cocina">
         <div className="Pedidos">
           <h2>Pedidos</h2>
-          <div className="options">
+          <div className="order-container">
             {this.state.orders.map((comanda, i) => (
               <button
                 onClick={(e) => this.handleClick(e, comanda)}
                 key={i + 1}
                 type="button"
-                className="btn btn-light custom"
-              >
-                <p>{comanda.data.nfactura}</p>
-                <span>Mesa Nº: {comanda.data.table}</span>
-                <p>
+                className="order-boxes">
+                <p className="title-box">{comanda.data.nfactura}</p>
+                <span className="title-table">Mesa Nº: {comanda.data.table}</span>
+                <p className="order-content">
                   Pedido:{" "}
                   {comanda.data.order.map((pedido, i) => {
                     return <span key={i + 1}>{pedido.name}</span>;

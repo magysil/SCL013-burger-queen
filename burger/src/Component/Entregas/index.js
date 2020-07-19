@@ -44,17 +44,16 @@ class Entregas extends Component {
     return (
       <div className="Entregas">
          <h2>Entregas</h2>
-        <div className="Entregar">
-          <div className="options">
+          <div className="order-container">
             {this.state.orders.map((comanda, i) => (
               <button
                 onClick={(e) => this.handleClick(e, comanda)}
                 key={i + 1}
                 type="button"
-                className="btn btn-light custom"
+                className="order-boxes"
               >
-                <p>{comanda.data.nfactura}</p>
-                <span>Mesa Nº: {comanda.data.table}</span>
+                <p className="title-box">{comanda.data.nfactura}</p>
+                <span className="title-table">Mesa Nº: {comanda.data.table}</span>
                 <p>
                   Pedido:{" "}
                   {comanda.data.order.map((pedido, i) => {
@@ -67,7 +66,6 @@ class Entregas extends Component {
               </button>
             ))}
           </div>
-        </div>
       </div>
     );
   }
