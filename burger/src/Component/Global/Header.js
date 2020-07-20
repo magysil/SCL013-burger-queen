@@ -1,12 +1,12 @@
 // Dependencies
-import React, { Component } from 'react';
-import propTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import Clock from '../ItemMenu/Clock';
+import React, { Component } from "react";
+import propTypes from "prop-types";
+import { Link } from "react-router-dom";
+import Clock from "../ItemMenu/Clock";
 
 // Assets
-import './Css/Header.css';
-import logo2 from '../Global/Images/crown.svg';
+import "./Css/Header.css";
+import logo2 from "../Global/Images/crown.svg";
 
 class Header extends Component {
   static propTypes = {
