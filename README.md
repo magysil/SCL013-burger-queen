@@ -11,7 +11,7 @@
 * [4. Prototipo alta fidelidad](#4-Prototipo-alta-fidelidad)
 * [5. Cómo utilzar la plataforma](#5-Cómo-utilizar-la-plataforma)
 * [6. Testeos](#6-Testeos)
-* [7. Pruebas Unitarias](#7-Pruebas-Unitarias)
+* [7. Auditoría Lighthouse](#7-Auditoría-Lighthouse)
 * [8. Checklist](#8-checklist)
 
 ***
@@ -60,9 +60,11 @@ Por último, en Entregas, el mesero puede ver un listado de las órdenes que ya 
 
 ![bq-prototipo baja](https://raw.githubusercontent.com/ivvnv/SCL013-burger-queen/master/burger/src/Component/Global/Images/bq-testsmaze.png)
 
-# 7. Pruebas unitarias
+# 7. Auditoría Lighthouse
 
-![bq-unitarytests](https://raw.githubusercontent.com/ivvnv/SCL013-burger-queen/master/burger/src/Component/Global/Images/tests.png)
+![bq-lighthouse](https://raw.githubusercontent.com/ivvnv/SCL013-burger-queen/master/burger/src/Component/Global/Images/lighthouse.png)
+
+Reporte completo: https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fburgerqueen-615be.web.app%2F
 
 ## 8. Checklist
 
