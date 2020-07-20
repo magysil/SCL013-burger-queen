@@ -40,11 +40,11 @@ El diseño de la app se basó en la limpieza y legibilidad que el personal de Bu
 
 ## 3. Prototipo baja fidelidad
 
-![bq-prototipo baja](https://raw.githubusercontent.com/ivvnv/SCL013-burger-queen/master/burger/src/Component/Global/Images/bq-bajafidelidad.png)
+![bq-prototipo baja](https://raw.githubusercontent.com/ivvnv/SCL013-burger-queen/master/burger/src/Component/Global/Images/bq-invisionbaja.png)
 
 ## 4. Prototipo alta fidelidad
 
-You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
+![bq-prototipo alta](https://raw.githubusercontent.com/ivvnv/SCL013-burger-queen/master/burger/src/Component/Global/Images/bq-bajafidelidad.png)
 
 ## 5. Cómo utilizar la plataforma
 
@@ -62,7 +62,7 @@ Por último, en Entregas, el mesero puede ver un listado de las órdenes que ya 
 
 # 7. Pruebas unitarias
 
-![bq-paletadecolores](https://raw.githubusercontent.com/ivvnv/SCL013-burger-queen/master/burger/src/Component/Global/Images/bq-paleta.png)
+![bq-unitarytests](https://raw.githubusercontent.com/ivvnv/SCL013-burger-queen/master/burger/src/Component/Global/Images/tests.png)
 
 ## 8. Checklist
 
@@ -97,7 +97,6 @@ Por último, en Entregas, el mesero puede ver un listado de las órdenes que ya 
 ### Estructura del código y guía de estilo
 
   
-
 * [X] Organizar y dividir el código en módulos (Modularización)
 * [X] Uso de identificadores descriptivos (Nomenclatura | Semántica)
 * [X] Uso de linter (ESLINT)
@@ -123,7 +122,7 @@ Por último, en Entregas, el mesero puede ver un listado de las órdenes que ya 
 
 ### React
 
-* [ ] [`JSX`](https://es.reactjs.org/docs/introducing-jsx.html)
+* [X] [`JSX`](https://es.reactjs.org/docs/introducing-jsx.html)
 *  [X]  [Componentes `class` y componentes `function`](https://es.reactjs.org/docs/components-and-props.html#function-and-class-components)
 *  [X]  `props`
 *  [X]  [Eventos en React.](https://es.reactjs.org/docs/handling-events.html)
