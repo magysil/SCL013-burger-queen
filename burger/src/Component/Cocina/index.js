@@ -62,8 +62,6 @@ class Cocina extends Component {
     }
   };
 
-
-
   render() {
 
     const getOrderDate = (timestamp) => {
@@ -72,17 +70,17 @@ class Cocina extends Component {
       // multiplied by 1000 so that the argument is in milliseconds, not seconds.
 
       // new Date() => retorna fecha y hora actual
-      // var date => Convierte el timestamp a formato fecha correspondiente.
-      var date = new Date(unix_timestamp * 1000);
+      // let date => Convierte el timestamp a formato fecha correspondiente.
+      let date = new Date(unix_timestamp * 1000);
       // Hours part from the timestamp
-      var hours = date.getHours();
+      let hours = date.getHours();
       // Minutes part from the timestamp
-      var minutes = "0" + date.getMinutes();
+      let minutes = "0" + date.getMinutes();
       // Seconds part from the timestamp
-      var seconds = "0" + date.getSeconds();
+      let seconds = "0" + date.getSeconds();
 
-      // Will display time in 10:30:23 format
-      var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+      // Will display time in 10:30:23 format, tamaño cadena, asi no muestra los segundos de minutos y los milisegundos de segundos
+      let formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
 
       return formattedTime;
     }

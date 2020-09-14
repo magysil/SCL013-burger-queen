@@ -21,6 +21,7 @@
 
 .InputContainer {
   padding: 10px;
+  padding-top:50px;
 }
 
 .InputName h2,
@@ -65,5 +66,74 @@ input {
   }
   .Menu {
     padding:0px;
+}
+}
+
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .Meseros {
+    margin-top: 100px;
+  }
+   .options {
+    display: grid;
+    grid-template-columns: 1fr 1fr !important;
+   justify-items:center;
+    padding: 20px;
+    border-radius: 6px;
+  }
+  .ExecutingorderAndTotal {
+    width: 60%;
+  }
+  .Total {
+  width:100%;
+  }
+  .h2Total {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  .totalPrice {
+    font-size: 20px;
+  }
+  .imput-order {
+    text-align:center
+  }
+  .InputName {
+    font-size: 10px;
+    padding-right:30px;
+    padding-top: 22px;
+    width:100%;
+  }
+  #clientName{
+    width:100%;
+    margin-left:10px;
+  }
+  .pPedido{
+    width:70%;
+  }
+  #clientTable{
+    width:70%;
+  }
+  .InputOrder .InputName h2 input {
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 14px;
+}
+.InputMesa h2, input {
+  font-size:20px;
+}
+.Buttons .btnoptions {
+  margin: 5px;
+  text-align:center;
+  width:50%;
+}
+.contentbutton {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  margin-top: 20px;
+  grid-gap: 2px;
+  width: 100%;
+  justify-items: center;
 }
 }
