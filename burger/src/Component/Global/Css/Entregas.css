@@ -71,3 +71,14 @@
   }
   }
 
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .Entregas {
+    margin-top: 100px;
+  }
+  .order-boxes {
+    width: 100%;
+    margin:10px auto;
+  }
+}

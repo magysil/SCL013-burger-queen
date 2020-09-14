@@ -1,12 +1,9 @@
 // Dependencias
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
-
+import Footer from './Global/Footer';
 // Componentes
 import Content from "./Global/Content.js";
-
-// Data
-//import items from "../Data/menu.js";
 
 class App extends Component {
   static propTypes = {
@@ -17,6 +14,7 @@ class App extends Component {
     return (
       <div className="App">
       <Content content={ children } />
+      <Footer/>
       </div>
     );
   }

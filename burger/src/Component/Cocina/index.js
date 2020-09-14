@@ -70,7 +70,7 @@ class Cocina extends Component {
       // multiplied by 1000 so that the argument is in milliseconds, not seconds.
 
       // new Date() => retorna fecha y hora actual
-      // var date => Convierte el timestamp a formato fecha correspondiente.
+      // let date => Convierte el timestamp a formato fecha correspondiente.
       let date = new Date(unix_timestamp * 1000);
       // Hours part from the timestamp
       let hours = date.getHours();
@@ -79,7 +79,7 @@ class Cocina extends Component {
       // Seconds part from the timestamp
       let seconds = "0" + date.getSeconds();
 
-      // Will display time in 10:30:23 format, tamaño cadena
+      // Will display time in 10:30:23 format, tamaño cadena, asi no muestra los segundos de minutos y los milisegundos de segundos
       let formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
 
       return formattedTime;

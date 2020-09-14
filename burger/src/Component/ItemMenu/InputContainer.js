@@ -45,6 +45,7 @@ class InputContainer extends Component {
       }
     }, 1);
     console.log(cantidad);
+    // eslint-disable-next-line
     this.state.numberOrder = cantidad;
   };
 

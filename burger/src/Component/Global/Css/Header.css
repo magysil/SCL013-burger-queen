@@ -68,3 +68,25 @@
       font-size:20px;
     }
 }
+
+
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .Header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    position:fixed;
+    text-align:left;
+    top:0;
+ }
+
+ .Clock div h3 {
+   margin: 7px;
+   font-size:24px
+ }
+ .Logo2 img {
+   margin:0px;
+   height:70px;
+ }
+  }
