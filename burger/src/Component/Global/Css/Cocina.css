@@ -60,7 +60,7 @@
 /* Desktop */
 @media only screen and (min-width: 1221px) and (orientation: landscape) {
   .Cocina {
-    min-height:630px;
+   height:100%;
   }
   .options {
     grid-template-columns: 1fr 1fr 1fr 1fr;
